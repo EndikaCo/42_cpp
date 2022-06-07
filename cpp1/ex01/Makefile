@@ -6,18 +6,17 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/07 10:41:36 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/07 13:54:47 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	BraiiiiiiinnnzzzZ
+NAME	=	Másss_cerebross
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/Zombie 	\
-			src/newZombie	\
 			src/main	\
-			src/randomChump	\
+			src/ZombieHorde	\
 					
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))

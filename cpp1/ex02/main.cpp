@@ -5,26 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 20:56:43 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/08 11:49:56 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/06/08 12:31:59 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/06/08 12:52:25 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include <string>
+#include <iostream>
 
 int main()
 {
-    std::string name;
-    std::string N;
-    Zombie *zombie;
-    
-    std::cout << "Type the number of zombies:\n";
-    std::getline(std::cin, N);
-
-    std::cout << "Name of the zombies:\n";
-    std::getline(std::cin, name);
-    zombie = zombieHorde(std::stoi(N), name);
-    
-    delete []zombie;
-    return 0;
+   std::string str= "HI THIS IS BRAIN";
+   std::string *stringPTR = &str;
+   std::string &stringREF = str;
+   
+   std::cout << "str=" << str << std::endl;
+   std::cout << "&str=" << &str << std::endl;
+   std::cout << "stringPTR=" << stringPTR << std::endl;
+   std::cout << "*stringPTR=" << *stringPTR << std::endl;
+   std::cout << "&stringPTR=" << &stringPTR << std::endl;
+   std::cout << "&stringREF=" << &stringREF << std::endl;
+   std::cout << "stringREF=" << stringREF << std::endl;
+   
+   return 0;
 }

@@ -1,6 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/ecorreia/42/42_CPP'
-make: Leaving directory '/home/ecorreia/42/42_CPP'
- 
-make: *** No targets specified and no makefile found.  Stop.
-

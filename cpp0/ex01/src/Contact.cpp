@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:02:05 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/05 21:28:38 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/14 21:11:24 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ y no puede guardar más de 8 contactos. Si un noveno se añade, reemplaza el má
 */
 
 # include <iomanip>
-# include "../inc/head.hpp"
+# include "../inc/Contact.hpp"
 
 void Contact::addContact()
 {

@@ -6,11 +6,11 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 11:01:50 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/05 15:14:51 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/14 21:11:30 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/head.hpp"
+# include "../inc/Contact.hpp"
 
 int swap_order(Contact *contact)
 {

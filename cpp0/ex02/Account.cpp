@@ -31,18 +31,17 @@ int	Account::checkAmount(void) const
 	return (this->_amount);
 }
 
-int	Account::checkAmount(void) const
-{
-	return (this->_amount);
-}
-
 void	Account::_displayTimestamp(void)
 {
 	std::cout << "[19920104_091532] ";
 }
 
-Account::Account (int initial_deposit) : _accountIndex(Account::_nbAccounts),
-		_amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0) {
+Account::Account (int initial_deposit):
+	_accountIndex(Account::_nbAccounts),
+	_amount(initial_deposit),
+	_nbDeposits(0),
+	_nbWithdrawals(0)
+{
 	Account::_nbAccounts++;
 	Account::_totalAmount += Account::checkAmount();
 	Account::_displayTimestamp();

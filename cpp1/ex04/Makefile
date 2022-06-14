@@ -6,18 +6,15 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/14 21:11:38 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/10 17:05:40 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	contact-book
+NAME	=	replace
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
 RM		=	rm -rf
-FILES	=	src/main 	\
-			src/Contact	\
-			src/utils	\
-					
+FILES	=	main				
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))
 

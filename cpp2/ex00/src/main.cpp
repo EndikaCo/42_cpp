@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 20:44:30 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/14 21:19:10 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/06/14 21:35:52 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/06/14 21:36:34 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include <iostream>
 
-Zombie* newZombie(std::string name)
+int main()
 {
-    Zombie *zombie = new Zombie();
-    zombie->putname(name);
-    return zombie; 
+    
+        return (0);
 }

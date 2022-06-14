@@ -6,11 +6,11 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 10:58:01 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/05 15:16:07 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/14 21:11:28 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/head.hpp"
+# include "../inc/Contact.hpp"
 
 void welcome_message()
 {

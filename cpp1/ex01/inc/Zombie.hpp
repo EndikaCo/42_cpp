@@ -7,12 +7,10 @@
 class Zombie
 {
     private:
-        std::string name;
-        
+        std::string name;  
     public:
-        Zombie(); // Declare constructor
-        ~Zombie();          // Declare Destructor
-        
+        Zombie();   // Declare constructor
+        ~Zombie();  // Declare Destructor
         void putname(std::string name);
         void announce(void);
 };

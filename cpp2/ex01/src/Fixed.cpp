@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:51:06 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/17 10:26:13 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/17 11:14:19 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,25 @@
 Fixed::Fixed() : fixedPoint(0)
 {
     std::cout << "Default constructor called\n";
+}
+
+/*A constructor that takes a constant integer as a parameter and that
+converts it to the correspondant fixed(8) point value. The fractional
+bits value is initialized like in ex00.*/
+Fixed::Fixed(const int par)
+{
+    
+}
+
+
+/*
+A constructor that takes a constant floating point as a parameter and that converts
+it to the correspondant fixed(8) point value. The fractional bits value is initialized
+like in ex00.
+*/
+Fixed::Fixed(const float par)
+{
+    
 }
 
 //A destructor.
@@ -52,4 +71,21 @@ void Fixed::setRawBits( int const raw )
 {
     fixedPoint = raw;    
 }
+
+/*A member function that converts the fixed point
+value to a floating point value.*/
+float Fixed::toFloat( void ) const
+{
+    
+}
+
+/*
+A member function that converts the fixed point value
+to an integer value.
+*/
+int Fixed::toInt( void ) const
+{
+    
+}
+
     

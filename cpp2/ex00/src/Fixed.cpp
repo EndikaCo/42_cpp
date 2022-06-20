@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:51:06 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/17 10:26:13 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/20 10:58:56 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ Fixed::~Fixed()
 //A copy constructor.
 Fixed::Fixed(Fixed const &orig)
 {
+    *this = orig;
     std::cout << "Copy constructor called\n";
-    fixedPoint = orig.getRawBits();  
+	return ;
 }
 
 //An assignation operator overload.

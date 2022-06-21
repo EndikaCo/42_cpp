@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 13:58:20 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/21 14:55:39 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/21 22:15:04 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,15 @@ Point::~Point()
 {
 }
 
+//Point assignation operator overload.
 Point& Point::operator=(Point const& a)
 {
-    //x = a.x;
-   // y = a.y;
+    (Fixed)x = a.x;
+    (Fixed)y = a.y;
     return (*this);
 }
 
+//A copy constructor.
 Point::Point(Point const &orig)
 {
     *this = orig;

@@ -6,20 +6,20 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:51:06 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/21 13:10:44 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/21 22:16:57 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Fixed.hpp"
 #include <cmath>
 
-// A default constructor that initializes the fixed point value to 0.
+// Fixed default constructor that initializes the fixed point value to 0.
 Fixed::Fixed() : fixedPoint(0)
 {
     //std::cout << "Default constructor called\n";
 }
 
-/*A constructor that takes a constant integer as a parameter and that
+/*Fixed constructor that takes a constant integer as a parameter and that
 converts it to the correspondant fixed(8) point value*/
 Fixed::Fixed(const int par)
 {
@@ -28,7 +28,7 @@ Fixed::Fixed(const int par)
     return;
 }
 
-/* A constructor that takes a constant floating point as a parameter and that converts
+/* Fixed constructor that takes a constant floating point as a parameter and that converts
 it to the correspondant fixed(8) point value.*/
 Fixed::Fixed(const float par)
 {
@@ -36,13 +36,13 @@ Fixed::Fixed(const float par)
     //std::cout << "Float constructor called\n";
 }
 
-//A destructor.
+//Fixed destructor.
 Fixed::~Fixed()
 {
     //std::cout << "Destructor called\n";
 }
 
-//A copy constructor.
+//Fixed copy constructor.
 Fixed::Fixed(Fixed const &orig)
 {
     *this = orig;
@@ -51,38 +51,38 @@ Fixed::Fixed(Fixed const &orig)
 }
 
 /*COMPARISON OVERLOAD OPERATORS*/
-//comparison overload operator >
+//Fixed comparison overload operator >
 bool Fixed::operator>(Fixed const &a)const
 {
     return (fixedPoint > a.fixedPoint);
 }
-//comparison overload operator <
+//Fixed comparison overload operator <
 bool Fixed::operator<(Fixed const &a)const
 {
     return (fixedPoint < a.fixedPoint);
 }
-//comparison overload operator <=
+//Fixed comparison overload operator <=
 bool Fixed::operator<=(Fixed const &a)const
 {
     return (fixedPoint <= a.fixedPoint);
 }
-//comparison overload operator >=
+//Fixed comparison overload operator >=
 bool Fixed::operator>=(Fixed const &a)const
 {
     return (fixedPoint >= a.fixedPoint); 
 }
-//comparison overload operator ==
+//Fixed comparison overload operator ==
 bool Fixed::operator==(Fixed const &a)const
 {
     return (fixedPoint == a.fixedPoint); 
 }
-//comparison overload operator !=
+//Fixed comparison overload operator !=
 bool Fixed::operator!=(Fixed const &a)const
 {
     return (fixedPoint != a.fixedPoint); 
 }
 
-//An assignation operator overload.
+//Fixed assignation operator overload.
 Fixed& Fixed::operator=(Fixed const& a)
 {
     //std::cout << "Assignation operator called\n";
@@ -91,28 +91,28 @@ Fixed& Fixed::operator=(Fixed const& a)
 }
 
 /*ARITMETHIC OPERATORS*/
-//arithmetic overloads operators +
+//Fixed arithmetic overloads operators +
 Fixed Fixed::operator+(Fixed const &a) const
 {
     Fixed fixed;
      fixed = fixedPoint + a.fixedPoint;
     return (fixed); 
 }
-//arithmetic overloads operators -
+//Fixed arithmetic overloads operators -
 Fixed Fixed::operator-(Fixed const &a) const
 {
     Fixed fixed;
     fixed = fixedPoint - a.fixedPoint;
     return (fixed);    
 }
-//arithmetic overloads operators *
+//Fixed arithmetic overloads operators *
 Fixed Fixed::operator*(Fixed const &a) const
 {
     Fixed fixed;
     fixed = (float)fixedPoint * a.fixedPoint / (1 << (2 * FRACTIONAL_BITS ));
     return (fixed); 
 }
-//arithmetic overloads operators /
+//Fixed arithmetic overloads operators /
 Fixed Fixed::operator/(Fixed const &a) const
 {
     Fixed fixed;
@@ -121,13 +121,13 @@ Fixed Fixed::operator/(Fixed const &a) const
 }
 
 /*INCREMENT OPERATORS*/
-//pre increment overload operator "++i"
+//Fixed pre increment overload operator "++i"
 Fixed Fixed::operator++() 
 {
     fixedPoint += 1;
     return (*this);
 }
-//post increment overload operator "i++"
+//Fixed post increment overload operator "i++"
 Fixed Fixed::operator++(int) 
 {
     Fixed cpy(*this);
@@ -136,13 +136,13 @@ Fixed Fixed::operator++(int)
 }
 
 /*DECREMENT OPERATORS*/
-//pre increment overload operator "--i"
+//Fixed pre increment overload operator "--i"
 Fixed Fixed::operator--()
 {
     fixedPoint -= 1;
     return (*this);
 }
-//post increment overload operator "i--"
+//Fixed post increment overload operator "i--"
 Fixed Fixed::operator--(int)
 {
     Fixed cpy(*this);
@@ -150,20 +150,20 @@ Fixed Fixed::operator--(int)
     return (cpy);
 }
 
-//A member function that returns the raw value of the fixed point value.
+//Fixed member function that returns the raw value of the fixed point value.
 int Fixed::getRawBits( void ) const
 {
     //std::cout << "getRawBits member function called\n";
     return (fixedPoint); 
 }
 
-//A member function that sets the raw value of the fixed point value.
+//Fixed member function that sets the raw value of the fixed point value.
 void Fixed::setRawBits( int const raw )
 {
     fixedPoint = raw;    
 }
 
-/*A member function that converts the fixed point
+/*Fixed member function that converts the fixed point
 value to a floating point value.*/
 float Fixed::toFloat( void ) const
 {
@@ -171,7 +171,7 @@ float Fixed::toFloat( void ) const
 }
 
 /*
-A member function that converts the fixed point value
+Fixed member function that converts the fixed point value
 to an integer value.
 */
 int Fixed::toInt( void ) const
@@ -180,14 +180,14 @@ int Fixed::toInt( void ) const
     
 }
 
-/*The static member function min that takes references on two fixed point values and
+/*Fixed static member function min that takes references on two fixed point values and
 returns a reference to the smallest value,*/
 Fixed& Fixed::min(Fixed &a, Fixed  &b)
 {
     return (a < b ? a : b);
 }
 
-/* and an overload that takes references on
+/*Fixed overload that takes references on
 two constant fixed point values and returns a reference to the smallest constant
 value.*/
 const Fixed& Fixed::min(  Fixed const &a,  Fixed const &b)
@@ -195,14 +195,14 @@ const Fixed& Fixed::min(  Fixed const &a,  Fixed const &b)
     return (a.getRawBits() < b.getRawBits() ? a : b);
 }
 
-/* The static member function max that takes references on two fixed point values
+/*Fixed static member function max that takes references on two fixed point values
 and returns a reference to the biggest value, */
 Fixed& Fixed::max(Fixed &a, Fixed  &b)
 {
     return (a > b ? a : b);
 }
 
-/*and an overload that takes references
+/*Fixed an overload that takes references
 on two constant fixed point values and returns a reference to the biggest constant
 value.*/ 
 const Fixed& Fixed::max(Fixed const &a, Fixed const &b)
@@ -210,7 +210,7 @@ const Fixed& Fixed::max(Fixed const &a, Fixed const &b)
     return (a.getRawBits() > b.getRawBits() ? a : b);
 }
 
-/*An overload to the « operator that inserts a floating point representation of the
+/*Fixed overload to the « operator that inserts a floating point representation of the
 fixed point value into the parameter output stream.*/
 std::ostream& operator<<(std::ostream& output, const Fixed& fixedP)
 {

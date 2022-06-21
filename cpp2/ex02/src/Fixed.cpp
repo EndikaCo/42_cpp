@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:51:06 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/21 12:49:16 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/21 13:10:44 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,32 +52,32 @@ Fixed::Fixed(Fixed const &orig)
 
 /*COMPARISON OVERLOAD OPERATORS*/
 //comparison overload operator >
-bool Fixed::operator>(Fixed const &a)
+bool Fixed::operator>(Fixed const &a)const
 {
     return (fixedPoint > a.fixedPoint);
 }
 //comparison overload operator <
-bool Fixed::operator<(Fixed const &a)
+bool Fixed::operator<(Fixed const &a)const
 {
     return (fixedPoint < a.fixedPoint);
 }
 //comparison overload operator <=
-bool Fixed::operator<=(Fixed const &a)
+bool Fixed::operator<=(Fixed const &a)const
 {
     return (fixedPoint <= a.fixedPoint);
 }
 //comparison overload operator >=
-bool Fixed::operator>=(Fixed const &a)
+bool Fixed::operator>=(Fixed const &a)const
 {
     return (fixedPoint >= a.fixedPoint); 
 }
 //comparison overload operator ==
-bool Fixed::operator==(Fixed const &a)
+bool Fixed::operator==(Fixed const &a)const
 {
     return (fixedPoint == a.fixedPoint); 
 }
 //comparison overload operator !=
-bool Fixed::operator!=(Fixed const &a)
+bool Fixed::operator!=(Fixed const &a)const
 {
     return (fixedPoint != a.fixedPoint); 
 }
@@ -109,14 +109,14 @@ Fixed Fixed::operator-(Fixed const &a) const
 Fixed Fixed::operator*(Fixed const &a) const
 {
     Fixed fixed;
-    fixed = fixedPoint * a.fixedPoint;
+    fixed = (float)fixedPoint * a.fixedPoint / (1 << (2 * FRACTIONAL_BITS ));
     return (fixed); 
 }
 //arithmetic overloads operators /
 Fixed Fixed::operator/(Fixed const &a) const
 {
     Fixed fixed;
-    fixed = fixedPoint / a.fixedPoint;
+    fixed = fixedPoint << FRACTIONAL_BITS / a.fixedPoint;
     return (fixed);     
 }
 
@@ -182,7 +182,6 @@ int Fixed::toInt( void ) const
 
 /*The static member function min that takes references on two fixed point values and
 returns a reference to the smallest value,*/
-
 Fixed& Fixed::min(Fixed &a, Fixed  &b)
 {
     return (a < b ? a : b);
@@ -198,7 +197,6 @@ const Fixed& Fixed::min(  Fixed const &a,  Fixed const &b)
 
 /* The static member function max that takes references on two fixed point values
 and returns a reference to the biggest value, */
-
 Fixed& Fixed::max(Fixed &a, Fixed  &b)
 {
     return (a > b ? a : b);
@@ -207,7 +205,6 @@ Fixed& Fixed::max(Fixed &a, Fixed  &b)
 /*and an overload that takes references
 on two constant fixed point values and returns a reference to the biggest constant
 value.*/ 
-
 const Fixed& Fixed::max(Fixed const &a, Fixed const &b)
 {
     return (a.getRawBits() > b.getRawBits() ? a : b);

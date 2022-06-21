@@ -16,12 +16,12 @@ public:
     ~Fixed();
     Fixed(Fixed const &orig);
 
-    bool operator>(Fixed const &a);
-    bool operator<(Fixed const &a);
-    bool operator<=(Fixed const &a);
-    bool operator>=(Fixed const &a);
-    bool operator==(Fixed const &a);
-    bool operator!=(Fixed const &a);
+    bool operator>(Fixed const &a)const;
+    bool operator<(Fixed const &a)const;
+    bool operator<=(Fixed const &a)const;
+    bool operator>=(Fixed const &a)const;
+    bool operator==(Fixed const &a)const;
+    bool operator!=(Fixed const &a)const;
 
     Fixed operator+(Fixed const &a)const;
     Fixed operator-(Fixed const &a)const;

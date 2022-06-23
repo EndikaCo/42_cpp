@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:31:23 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/23 19:52:10 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/23 19:52:22 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string name;
         int hitPoints = 10;
         int EnergyPoints = 10;

@@ -6,13 +6,18 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:32:33 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/23 17:55:13 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/23 19:20:42 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ClapTrap.hpp"
 
 // ClapTrap default constructor
+ClapTrap::ClapTrap(): name("Bot")
+{
+}
+
+// ClapTrap parameter constructor
 ClapTrap::ClapTrap(std::string nm) : name(nm)
 {
     std::cout << name << " Constructor called\n";

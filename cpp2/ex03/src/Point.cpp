@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 13:58:20 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/22 12:52:10 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/23 09:52:47 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ Point::Point() : x(0) , y(0)
 
 /*Point constructor that takes two constant floating points as parameters
 and that initializes x and y with those values.*/
-Point::Point(float x, float y) : x(x), y(y)
+Point::Point(float a, float b) : x(a), y(b)
 {
-    std::cout << "Point float constructor called" << x << " & " << y << std::endl;
+   // std::cout << "Point float constructor called" << this->x << " & " << this->y << std::endl;
 }
 
 //Point default destructor
@@ -34,8 +34,8 @@ Point::~Point()
 //Point assignation operator overload.
 Point& Point::operator=(Point const& a)
 {
-    (Fixed)x = a.x;
-    (Fixed)y = a.y;
+    *(Fixed*)&x = a.getX();
+    *(Fixed*)&y = a.getY();
     return (*this);
 }
 
@@ -47,15 +47,13 @@ Point::Point(Point const &orig)
 }
 
 //Point getter for X atributte
-Fixed Point::getX(void)
+Fixed Point::getX(void) const
 {
-    //std::cout << "getX" << x << std::endl;
     return (x);    
 }
 
 //Point getter for Y atributte
-Fixed Point::getY(void)
+Fixed Point::getY(void) const
 {
-    //std::cout << "getY" << y << std::endl;
     return (y);    
 }

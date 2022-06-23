@@ -6,11 +6,12 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:29:39 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/22 12:45:33 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:14:56 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Point.hpp"
+
 
 /*
 Area(ΔABC) = Area(Trap.BAED) + Area(Trap.ACFE) - Area(Trap.BCFD)
@@ -24,10 +25,8 @@ float area( Point a, Point b, Point c)
 
     float area = (TrapBAED + TrapACFE + TrapBCFD) / 2;
     
-    std::cout << "a.getX: " << a.getX().toFloat() << std::endl;
-    std::cout << "area: " << area << std::endl;
-
-    
+    //std::cout << "a.getX: " << a.getX().toFloat() << std::endl;
+      
     return ((area<0)?(-area):(area));
 }
 
@@ -46,9 +45,13 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
     float d0, d1, d2, d3;
 
 	d0 = area(a, b, c);
+    std::cout << "area: " << d0 << std::endl;
 	d1 = area(point, a, b);
+    std::cout << "area: " << d1 << std::endl;
 	d2 = area(point, b, c);
+    std::cout << "area: " << d2 << std::endl;
 	d3 = area(point, a, c);
+    std::cout << "area: " << d3 << std::endl;
 
 	if ( d1 + d2 + d3 == d0 )
     {

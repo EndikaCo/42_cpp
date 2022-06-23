@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 13:45:18 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/22 12:25:08 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/23 09:33:41 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Point
         Point(Point const &orig);
         Point& operator=(Point const& a);
 
-        Fixed getX(void);
-        Fixed getY(void);
+        Fixed getX(void) const;
+        Fixed getY(void) const;
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);

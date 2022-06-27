@@ -6,7 +6,7 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/23 17:57:02 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/27 10:42:37 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/ClapTrap	\
+			src/ScavTrap	\
 			src/main	
 					
 SRCS	=	$(addsuffix .cpp, $(FILES))

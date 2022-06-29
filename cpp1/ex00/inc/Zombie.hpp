@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/29 20:15:35 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/06/29 20:27:01 by ecorreia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 
@@ -9,14 +21,13 @@ class Zombie
     private:
         std::string name;
     public:
-        Zombie();   // Declare constructor
-        ~Zombie();  // Declare Destructor
-        
-        void putname(std::string name);
+        Zombie();
+        ~Zombie();
+        void setname(std::string name);
         void announce(void);
 };
 
-void randomChump( std::string name );//función que cree un Zombie, y lo haga anunciarse a sí mismo.
-Zombie* newZombie( std::string name );//función que cree un Zombie, lo nombre, y lo devuelva
+void randomChump( std::string name );
+Zombie* newZombie( std::string name );
 
 #endif

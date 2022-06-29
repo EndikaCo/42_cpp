@@ -1,14 +1,17 @@
 #include "../inc/Zombie.hpp"
 
-Zombie::Zombie()
+//default constructor
+Zombie::    Zombie()
 {
 }
 
-void Zombie::putname(std::string name)
+//name setter
+void Zombie::setname(std::string name)
 {
     this->name = name;
 }
 
+//destructor
 Zombie::~Zombie()
 {
     std::cout << this->name << " Destroyed\n"; 

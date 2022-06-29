@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:00:02 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/14 21:10:30 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/29 19:03:07 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Contact
 {
     private:
-        int id;
         std::string first_name;
         std::string last_name;
         std::string nickname;

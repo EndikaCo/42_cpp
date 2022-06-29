@@ -6,15 +6,16 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/29 20:08:33 by ecorreia          #+#    #+#              #
-#    Updated: 2022/05/29 20:08:34 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/29 20:33:44 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
+NAME	= ex00_megaphone
 CC		= clang++
-FLAGS	= -Werror -Wextra -Wall
+FLAGS	= -Werror -Wextra -Wall -g3 -fsanitize=address
 RM		= rm -rf
 FILES	= megaphone
+
 SRCS 	= $(addsuffix .cpp, $(FILES))
 OBJS 	= $(addsuffix .o, $(FILES))
 
@@ -24,7 +25,7 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
+.cpp.o:
 	@$(CC) $(FLAGS) -c -o $@ $<
 
 clean:

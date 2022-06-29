@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/07 10:41:36 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/29 20:32:40 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	BraiiiiiiinnnzzzZ
+NAME	=	ex00_BraiiiiiiinnnzzzZ
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/Zombie 	\
 			src/newZombie	\
@@ -28,7 +28,7 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
+.cpp.o:
 	@$(CC) $(FLAGS) -c -o $@ $<
 
 clean:

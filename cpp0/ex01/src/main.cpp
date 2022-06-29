@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 10:58:01 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/14 21:11:28 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/29 19:38:19 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void welcome_message()
                 << "_____________________________________\n";   
 }
 
-int add(int n_contacts, Contact *contact, int c)
+int add(int n_contacts, Contact *contact)
 {   
     if(n_contacts == 8)
     {
@@ -28,7 +28,7 @@ int add(int n_contacts, Contact *contact, int c)
         contact[7].addContact();
         return 1;
     }
-    contact[c++].addContact();
+    contact[n_contacts++].addContact();
     return 0;    
 }
 
@@ -60,23 +60,21 @@ int main()
 {
     std::string command;
     Contact contact[8];
-    int n_contacts;
-    int c;
+    int  n_contacts;
 
-    c = 0;
     n_contacts = 0;
     while (1)
     {   
         welcome_message();
         std::getline(std::cin, command);
         if(!command.compare("ADD"))
-            if(add(n_contacts, contact, c++))
+            if(!add(n_contacts, contact))
                 n_contacts++;
         if(!command.compare("SEARCH"))
             search(contact);
         if(!command.compare("EXIT"))
             return (0);
-        if(!command.compare("test"))
+        if(!command.compare("TEST"))
         {
             for(int i = 0; i < 8; i++)
             {

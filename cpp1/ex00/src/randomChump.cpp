@@ -6,14 +6,16 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 11:23:53 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/07 11:50:16 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/29 20:39:08 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Zombie.hpp"
 
+//You have to write a function that will create a Zombie, and make it announce itself.
 void randomChump(std::string name )
 {
     Zombie *zombie = newZombie(name);
     zombie->announce();
+    delete zombie;
 }

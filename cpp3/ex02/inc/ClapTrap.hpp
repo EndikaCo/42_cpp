@@ -6,14 +6,18 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:31:23 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/27 10:33:40 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/28 10:18:06 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 #include <string.h>
 
-class ClapTrap
+class ClapTrap 
 {
     protected:
         std::string name;
@@ -33,3 +37,5 @@ class ClapTrap
         int getHitPoints(void);
         
 };
+
+#endif

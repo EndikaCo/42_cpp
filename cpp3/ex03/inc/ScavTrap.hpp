@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:35:32 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/28 10:11:56 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/29 10:21:57 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-    class ScavTrap: public ClapTrap
+    class ScavTrap: virtual public ClapTrap
     {
         public:
             ScavTrap();

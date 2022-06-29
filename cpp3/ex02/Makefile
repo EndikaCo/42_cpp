@@ -6,16 +6,17 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/27 10:42:37 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/28 10:19:39 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Serena,_my_love!
+NAME	=	ex02_Repetitive_work
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/ClapTrap	\
 			src/ScavTrap	\
+			src/FragTrap	\
 			src/main	
 					
 SRCS	=	$(addsuffix .cpp, $(FILES))

@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:35:32 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/27 20:12:13 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/28 10:11:56 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
     class ScavTrap: public ClapTrap
     {
         public:
-            ScavTrap(/* args */);
+            ScavTrap();
             ScavTrap(std::string name);
             ~ScavTrap();
             ScavTrap(ScavTrap const &orig);

@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:32:33 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/27 14:35:36 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/28 09:28:52 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // ClapTrap default constructor
 ClapTrap::ClapTrap(): name("Bot")
 {
-    std::cout << name << " Claptrap default constructor called\n";
+    std::cout << name << "   Claptrap default constructor called\n";
 }
 
 // ClapTrap parameter constructor

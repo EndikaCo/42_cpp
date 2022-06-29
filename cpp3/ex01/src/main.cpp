@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 16:03:35 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/27 14:30:24 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/06/28 09:29:03 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ int main()
     scav1.attack(scav2.getName());
     scav2.takeDamage(scav1.getHitPoints());
     scav2.guardGate();
-
 
 }

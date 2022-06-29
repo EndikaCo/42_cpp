@@ -5,28 +5,17 @@
 #include "../inc/ScavTrap.hpp"
 #include "../inc/FragTrap.hpp"
 
-class DiamondTrap : public ClapTrap, ScavTrap
+class DiamondTrap : public ScavTrap, FragTrap
 {
-private:
-    std::string name;
-public:
-    DiamondTrap(/* args */);
-    DiamondTrap(std::string name);
-    ~DiamondTrap();
+    private:
+        std::string name;
+    public:
+        DiamondTrap(/* args */);
+        DiamondTrap(std::string name);
+        ~DiamondTrap();
+        DiamondTrap(const DiamondTrap &orig);
+        DiamondTrap& operator=(const DiamondTrap &orig);
+        void whoAmI();
 };
-
-DiamondTrap::DiamondTrap(/* args */)
-{
-}
-
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
-{
-}
-
-DiamondTrap::~DiamondTrap()
-{
-}
-
-
 
 #endif

@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/28 11:03:17 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/06/29 10:34:22 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex03_Now it's weird!
+NAME	=	ex03_Now_its_weird!
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -g -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/ClapTrap	\
 			src/ScavTrap	\

@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/15 09:31:48 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 11:53:19 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	replace
+NAME	=	ex04_replace
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	main				
 SRCS	=	$(addsuffix .cpp, $(FILES))
@@ -24,7 +24,7 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
+.cpp.o:
 	@$(CC) $(FLAGS) -c -o $@ $<
 
 clean:

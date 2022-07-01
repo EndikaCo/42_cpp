@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 17:05:54 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/14 20:53:14 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 11:42:35 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,11 @@ void ft_stream(std::string fileName,std::string s1, std::string s2)
 
 int main(int argc, char**argv)
 {
-   
     std::string     fileName;
-
-    int pos;
-    
     if(argc < 3)
     {
         std::cout << "Argument error" << std::endl;
+        return(1);
     }
     ft_stream(argv[1], argv[2], argv[3]);
 

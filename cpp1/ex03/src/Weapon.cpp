@@ -6,13 +6,13 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 12:55:15 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/09 13:12:05 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 11:31:46 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Weapon.hpp"
 
-std::string & Weapon::getType()
+std::string const & Weapon::getType()
 {
     return type;
 }
@@ -29,4 +29,5 @@ Weapon::Weapon(std::string type)
 
 Weapon::~Weapon()
 {
+    std::cout << "Weapon destroyed"  << std::endl;
 }

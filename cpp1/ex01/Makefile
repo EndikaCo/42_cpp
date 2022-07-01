@@ -6,11 +6,11 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/07 13:54:47 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 11:08:56 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Másss_cerebross
+NAME	=	ex01_Moar_brainz!
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
 RM		=	rm -rf

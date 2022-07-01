@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/15 11:25:53 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 12:16:06 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Karen-filter
+NAME	=	ex06_Karen_filter
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/main	\
 			src/Karen
@@ -26,7 +26,7 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
+.cpp.o:
 	@$(CC) $(FLAGS) -c -o $@ $<
 
 clean:

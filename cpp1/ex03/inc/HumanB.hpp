@@ -6,9 +6,12 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 12:54:49 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/09 14:52:08 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 11:18:59 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
 #include "../inc/Weapon.hpp"
 
@@ -23,4 +26,6 @@ public:
     void setWeapon(Weapon &weapon);
     void attack();
 };
+
+#endif
 

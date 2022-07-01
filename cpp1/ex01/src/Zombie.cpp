@@ -1,5 +1,6 @@
 #include "../inc/Zombie.hpp"
 
+//default constructor
 Zombie::Zombie()
 {
 }
@@ -11,7 +12,7 @@ void Zombie::putname(std::string name)
 
 Zombie::~Zombie()
 {
-    std::cout << this->name << " Destroyed\n"; 
+    std::cout <<"Destroyed\n"; 
 }
 
 void Zombie::announce(void)

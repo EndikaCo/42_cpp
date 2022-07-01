@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/09 13:11:29 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 11:53:37 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Másss_cerebross
+NAME	=	ex03_Unnecessary_violence
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/main	\
 			src/HumanA	\
@@ -28,7 +28,7 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
+.cpp.o:
 	@$(CC) $(FLAGS) -c -o $@ $<
 
 clean:

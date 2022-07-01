@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 20:56:43 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/29 20:36:33 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 10:07:29 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main()
     std::cout << "Type the name of the zombie:\n";
     std::getline(std::cin, name);
     zombie = newZombie(name);
+    zombie->announce();
+    std::cout << std::endl;
     randomChump("aurelio");
     
     delete zombie;

@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 21:35:52 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/21 12:50:23 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 13:59:54 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int main( void )
     std::cout << a << std::endl;
     std::cout << a++ << std::endl;
     std::cout << a << std::endl;
-    
     std::cout << b << std::endl;
-    
     std::cout << Fixed::max( a, b ) << std::endl;
     
     return 0;

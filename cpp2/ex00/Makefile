@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/14 21:35:42 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 12:27:27 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	My_First_Orthodox_Class
+NAME	=	ex00_My_First_Orthodox_Class
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/Fixed	\
 			src/main	
@@ -26,8 +26,8 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
-	@$(CC) $(FLAGS) -c -o $@ $<
+.c.o:
+	@$(CC) $(FLAGS) -cpp -o $@ $<
 
 clean:
 	$(RM) $(OBJS)

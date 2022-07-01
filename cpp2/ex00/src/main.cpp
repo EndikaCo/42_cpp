@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 21:35:52 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/17 10:24:09 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 12:48:30 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main( void ) 
 {
     Fixed a;
-    Fixed b( a );
+    Fixed b(a);
     Fixed c;
     c = b;
     std::cout << a.getRawBits() << std::endl;

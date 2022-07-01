@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/20 11:41:50 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 14:02:32 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Now_we’re_talking
+NAME	=	ex02_Now_we_re_talking
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/Fixed	\
 			src/main	
@@ -26,8 +26,8 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
-	@$(CC) $(FLAGS) -c -o $@ $<
+.c.o:
+	@$(CC) $(FLAGS) -cpp -o $@ $<
 
 clean:
 	$(RM) $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 21:35:52 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/20 10:46:36 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/01 13:44:17 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main( void )
     std::cout << "c is " << c << std::endl;
     std::cout << "d is " << d << std::endl;
     
-    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+    std::cout << "a is " << a.toFloat() << " as Float" << std::endl;
     std::cout << "b is " << b.toInt() << " as integer" << std::endl;
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;

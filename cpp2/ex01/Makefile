@@ -6,11 +6,11 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/17 10:34:25 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/01 13:37:20 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Towards_a_more_useful_fixed_point_class
+NAME	=	ex01_Towards_a_more_useful_fixed_point_class
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
 RM		=	rm -rf
@@ -26,8 +26,8 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
-	@$(CC) $(FLAGS) -c -o $@ $<
+.c.o:
+	@$(CC) $(FLAGS) -cpp -o $@ $<
 
 clean:
 	$(RM) $(OBJS)

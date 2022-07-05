@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:35:27 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/27 14:31:12 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/05 09:32:27 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 ScavTrap::ScavTrap() : ClapTrap()
 {   
     hitPoints = 100;
-    EnergyPoints = 50;
-    AttackDamage = 20; 
+    energyPoints = 50;
+    attackDamage = 20; 
     std::cout << "ScavTrap default constructor called\n";
 }
 
@@ -28,15 +28,15 @@ ScavTrap::ScavTrap() : ClapTrap()
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     hitPoints = 100;
-    EnergyPoints = 50;
-    AttackDamage = 20; 
+    energyPoints = 50;
+    attackDamage = 20; 
     std::cout << name << " ScavTrap parameter constructor called\n";    
 }
 
 //ScavTrap destructor
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap destrucotr called\n";    
+    std::cout << name <<" ScavTrap destrucotr called\n";    
 }
 
 //ScavTrap copy constructor

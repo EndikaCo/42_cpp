@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:32:33 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/28 09:28:52 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/05 09:19:18 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& a)
     std::cout << "Claptrap assignation operator called\n";
     name = a.name;
     hitPoints = a.hitPoints;
-    EnergyPoints = a.EnergyPoints;
-    AttackDamage = a.AttackDamage;
+    energyPoints = a.energyPoints;
+    attackDamage = a.attackDamage;
     return (*this);
 }
 
@@ -64,17 +64,17 @@ void ClapTrap::attack(std::string const & target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    EnergyPoints -= amount;
+    energyPoints -= amount;
     std::cout << "ClapTrap " << name << " received: " 
-    << amount << " points of damage. "<< EnergyPoints 
+    << amount << " points of damage. "<< energyPoints 
     << " energy points remaining" <<std::endl;    
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    EnergyPoints += amount;
+    energyPoints += amount;
     std::cout << "ClapTrap " << name << " repaired: " 
-    << amount << " energy points. "<< EnergyPoints 
+    << amount << " energy points. "<< energyPoints 
     << " energy points remaining" <<std::endl;  
 }
 

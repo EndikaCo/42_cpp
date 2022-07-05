@@ -6,13 +6,13 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 11:01:56 by ecorreia          #+#    #+#              #
-#    Updated: 2022/06/20 18:49:51 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/05 09:21:22 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Aaaaand...OPEN!
+NAME	=	ex00_Aaaaand...OPEN!
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/ClapTrap	\
 			src/main	
@@ -26,8 +26,8 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
-	@$(CC) $(FLAGS) -c -o $@ $<
+.c.o:
+	@$(CC) $(FLAGS) -cpp -o $@ $<
 
 clean:
 	$(RM) $(OBJS)

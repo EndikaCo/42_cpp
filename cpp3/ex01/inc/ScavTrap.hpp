@@ -6,19 +6,17 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:35:32 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/27 14:08:46 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/05 10:12:12 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-//#include "ClapTrap.hpp"
-
     class ScavTrap: public ClapTrap
     {
         public:
-            ScavTrap(/* args */);
+            ScavTrap();
             ScavTrap(std::string name);
             ~ScavTrap();
             ScavTrap(ScavTrap const &orig);

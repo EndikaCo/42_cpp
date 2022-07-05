@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 10:13:36 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/29 10:48:16 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/05 09:19:18 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ DiamondTrap::DiamondTrap(/* args */) : ClapTrap("bot_clap_name"), FragTrap(), Sc
 {
     this->name = "bot";
     this->FragTrap::hitPoints;
-	this->ScavTrap::EnergyPoints;
-	this->FragTrap::AttackDamage;
+	this->ScavTrap::energyPoints;
+	this->FragTrap::attackDamage;
     std::cout << this->name << " DiamondTrap default constructor called" << std::endl;
 }
 
@@ -25,8 +25,8 @@ DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name + "_c
 {
     this->name = name;
 	this->FragTrap::hitPoints;
-	this->ScavTrap::EnergyPoints;
-	this->FragTrap::AttackDamage;
+	this->ScavTrap::energyPoints;
+	this->FragTrap::attackDamage;
     std::cout << this->name << " DiamondTrap parameter constructor called" << std::endl;
 }
 
@@ -45,9 +45,9 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &orig)
 {
 	if (this != &orig)
 	{
-		AttackDamage = orig.AttackDamage;
+		attackDamage = orig.attackDamage;
 		hitPoints = orig.hitPoints;
-		EnergyPoints = orig.EnergyPoints;
+		energyPoints = orig.energyPoints;
 	}
     std::cout << "DiamondTrap assignment operator called" << std::endl;
 	return *this;

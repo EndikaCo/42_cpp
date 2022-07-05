@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 10:07:18 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/06/28 10:53:20 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/05 09:19:18 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 FragTrap::FragTrap() : ClapTrap()
 {
     hitPoints = 100;
-    EnergyPoints = 100;
-    AttackDamage = 30;
+    energyPoints = 100;
+    attackDamage = 30;
     std::cout << "Fragtrap default contructor called\n";
 }
 
@@ -25,8 +25,8 @@ FragTrap::FragTrap() : ClapTrap()
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     hitPoints = 100;
-    EnergyPoints = 100;
-    AttackDamage = 30;
+    energyPoints = 100;
+    attackDamage = 30;
     std::cout << name << " Fragtrap parameter contructor called\n";
 }
 

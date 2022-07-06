@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 12:16:35 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/06 11:14:35 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/06 10:35:11 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/06 11:08:11 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "../inc/Cat.hpp"
 
-#include <iostream>
-
-class Animal
+Cat::Cat() : Animal()
 {
-    protected:
-    std::string type;
+    type = "Cat";
+    std::cout << "Cat default construcotr called" << std::endl;
+}
 
-    public:
-        Animal();
-        virtual ~Animal();
-        Animal(Animal const &orig);
-        std::string getType(void) const ;
-        virtual void makeSound(void) const;
-};
+Cat::~Cat()
+{
+    std::cout << "Cat destructor called" << std::endl;
+}
 
-#endif
+void Cat::makeSound(void) const
+{
+    std::cout << "Miaaauuh!!!" << std::endl;    
+}

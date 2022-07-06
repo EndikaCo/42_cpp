@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 12:16:35 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/06 11:14:35 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/06 10:02:02 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/06 10:50:07 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "../inc/Dog.hpp"
 
-#include <iostream>
-
-class Animal
+//Dog default construcotr
+Dog ::Dog() : Animal()
 {
-    protected:
-    std::string type;
+    type = "Dog";
+    std::cout << "Dog default construcotr called" << std::endl;
+}
 
-    public:
-        Animal();
-        virtual ~Animal();
-        Animal(Animal const &orig);
-        std::string getType(void) const ;
-        virtual void makeSound(void) const;
-};
+Dog ::~Dog ()
+{
+    std::cout << "Dog destructor called" << std::endl;
+}
 
-#endif
+void Dog::makeSound(void) const
+{
+    std::cout << "Guauh!!!" << std::endl;    
+}

@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 12:16:35 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/06 11:14:35 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/06 09:57:10 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/06 11:07:57 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include <iostream>
+#include "../inc/Animal.hpp"
 
-class Animal
+class Cat : public Animal
 {
-    protected:
-    std::string type;
-
     public:
-        Animal();
-        virtual ~Animal();
-        Animal(Animal const &orig);
-        std::string getType(void) const ;
-        virtual void makeSound(void) const;
+        Cat();
+        ~Cat();
+        void makeSound(void) const;
 };
+
+
 
 #endif

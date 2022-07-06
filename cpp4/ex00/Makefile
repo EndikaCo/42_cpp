@@ -6,7 +6,7 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 12:08:30 by ecorreia          #+#    #+#              #
-#    Updated: 2022/07/05 12:26:06 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/06 11:55:38 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,12 @@ NAME	=	ex00_Polymorphism
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
-FILES	=	src/main	\
-			src/Animal
+FILES	=	src/main		\
+			src/Animal		\
+			src/Cat			\
+			src/Dog			\
+			src/WrongAnimal	\
+			src/WrongCat	
 					
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))

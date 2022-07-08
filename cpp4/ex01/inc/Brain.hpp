@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:58:54 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/06 13:05:13 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/08 10:31:51 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,6 @@ public:
     Brain(/* args */);
     ~Brain();
 };
-
-Brain::Brain(/* args */)
-{
-}
-
-Brain::~Brain()
-{
-}
 
 
 #endif

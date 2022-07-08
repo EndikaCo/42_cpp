@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:10:50 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/06 12:20:34 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/08 12:56:46 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,34 @@
 #include "../inc/Cat.hpp"
 #include "../inc/WrongCat.hpp"
 
+
+void check_deep(Dog &basic)
+{
+    Dog tmp = basic;    
+}
+
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    delete i;
-    delete j;
-    delete meta;
+    /*
+    Animal *animals[4];
+    animals[0] = new Dog();
+    animals[1] = new Dog();
+    animals[2] = new Cat();
+    animals[3] = new Cat();
+
+    for (int i = 0; i < 4; i++)
+        delete animals[i];  
+    */
+   
+    Dog basic;
+    std::cout << std::endl << "check deep" << std::endl;
     
-    std::cout << std::endl << "WRONG ANIMAL" << std::endl;
+    check_deep(basic);
     
-    const WrongAnimal* wrongMeta = new WrongAnimal();
-    const WrongAnimal* wrongi = new WrongCat();
-    std::cout << wrongi->getType() << " " << std::endl;
-    wrongi->makeSound(); //will output the cat sound!
-    wrongMeta->makeSound();
-    delete wrongi;
-    delete wrongMeta;
+    //const Animal* j = new Dog();
+    //const Animal* i = new Cat();
+    
+    //delete j;//should not create a leak
+    //delete i;
     
 }

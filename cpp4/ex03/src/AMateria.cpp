@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 12:16:35 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/12 10:24:22 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/12 11:52:29 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/12 11:53:37 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
-
-#include <iostream>
-
-class Animal
+#include "../inc/AMateria.hpp"
+//AMateria Parameter constructor
+AMateria::AMateria(std::string const & type)
 {
-    protected:
-    std::string type;
+    
+}
 
-    public:
-        Animal();
-        virtual ~Animal();
-        Animal(Animal const &orig);
-        std::string getType(void) const ;
-        virtual void makeSound(void) const;
-};
+//AMateria destructor
+AMateria::~AMateria()
+{
+    
+}
 
-#endif
+//AMateria copy constructor
+//AMateria::AMateria(AMateria const &orig)
+//{
+//    *this = orig;
+////}

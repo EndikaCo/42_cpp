@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 09:57:10 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/12 09:39:40 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:57:50 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define  WRONGCAT_HPP
 
-#include "../inc/Animal.hpp"
-#include "../inc/Brain.hpp"
+#include "../inc/WrongAnimal.hpp"
 
-class Cat : public Animal
+class  WrongCat : public WrongAnimal
 {
-    private:
-        Brain *brain; 
     public:
-        Cat();
-        virtual ~Cat();
-        virtual void makeSound(void) const;
-        Cat(Cat const &orig);
-        Cat& operator=(Cat const &orig);
-        std::string b_getIdeas(int n);
-        void b_setIdea(std::string idea);
+         WrongCat();
+        ~WrongCat();
+        void makeSound(void) const;
 };
-
-
 
 #endif

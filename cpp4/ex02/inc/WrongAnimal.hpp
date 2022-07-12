@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 09:57:10 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/12 09:39:40 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/06 11:41:50 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/06 11:53:02 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "../inc/Animal.hpp"
-#include "../inc/Brain.hpp"
+#include <iostream>
 
-class Cat : public Animal
+class WrongAnimal
 {
-    private:
-        Brain *brain; 
+    protected:
+    std::string type;
+
     public:
-        Cat();
-        virtual ~Cat();
-        virtual void makeSound(void) const;
-        Cat(Cat const &orig);
-        Cat& operator=(Cat const &orig);
-        std::string b_getIdeas(int n);
-        void b_setIdea(std::string idea);
+        WrongAnimal();
+        ~WrongAnimal();
+        WrongAnimal(WrongAnimal const &orig);
+        std::string getType(void) const ;
+        void makeSound(void) const;
 };
-
-
 
 #endif

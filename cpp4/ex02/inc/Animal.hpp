@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 09:57:10 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/12 09:39:40 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/05 12:16:35 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/12 10:51:23 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-#include "../inc/Animal.hpp"
-#include "../inc/Brain.hpp"
+#include <iostream>
 
-class Cat : public Animal
+class Animal
 {
-    private:
-        Brain *brain; 
+    protected:
+    std::string type;
+
     public:
-        Cat();
-        virtual ~Cat();
-        virtual void makeSound(void) const;
-        Cat(Cat const &orig);
-        Cat& operator=(Cat const &orig);
-        std::string b_getIdeas(int n);
-        void b_setIdea(std::string idea);
+        Animal();
+        virtual ~Animal();
+        Animal(Animal const &orig);
+        std::string getType(void) const ;
+        virtual void makeSound(void) const = 0; // pure virtual (makes Animal Abstract)
 };
-
-
 
 #endif

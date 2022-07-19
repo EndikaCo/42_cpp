@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 10:12:48 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/19 14:25:38 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/07/19 11:04:15 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/19 14:06:36 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
+#include "AMateria.hpp"
 #include <iostream>
-class ICharacter
+
+class Ice : public AMateria
 {
-    protected:
-        std::string name;
+
     public:
-        virtual ~ICharacter() {}
-        virtual std::string const & getName() const = 0;
-        virtual void equip(AMateria* m) = 0;
-        virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter& target) = 0;
+        Ice();
+        ~Ice();
+        Ice(std::string type);
 };
 
-
-ICharacter::~ICharacter()
+Ice::Ice() : AMateria()
 {
 }
+
+Ice::Ice(std::string type) : AMateria(type)
+{
+    
+}
+
+Ice::~Ice()
+{
+}
+
 
 #endif

@@ -12,7 +12,8 @@ class Cure : public AMateria
         Cure(std::string type);
         ~Cure();
         Cure* clone() const;
-};
+        void use(ICharacter&);
+};  
 
 Cure::Cure() : AMateria()
 {
@@ -34,6 +35,11 @@ Cure* Cure::clone() const
     std::cout << "Cure clone method called" << std::endl;
     Cure *temp = new Cure(*this);
     return (temp);
+}
+
+void Cure::use(ICharacter& character)
+{
+   std::cout << "* heals " << character.getName() << "'s wounds *" << std::endl;
 }
 
 #endif

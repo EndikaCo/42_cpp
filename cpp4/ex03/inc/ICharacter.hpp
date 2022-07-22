@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:12:48 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/19 14:25:38 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:41:14 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 #define ICHARACTER_HPP
 
 #include <iostream>
+
+#include "AMateria.hpp"
+
+//Interface for Character
 class ICharacter
 {
     protected:
         std::string name;
+        AMateria *materia[4];    
+        int     idx;
+        
     public:
         virtual ~ICharacter() {}
         virtual std::string const & getName() const = 0;
@@ -30,5 +37,6 @@ class ICharacter
 ICharacter::~ICharacter()
 {
 }
+
 
 #endif

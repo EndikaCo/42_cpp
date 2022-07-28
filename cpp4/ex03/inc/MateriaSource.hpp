@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:18:39 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/27 14:43:22 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/28 11:59:09 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,26 +48,33 @@ MateriaSource::~MateriaSource()
     delete[] learned_materia;
 }
 
-void MateriaSource::learnMateria(AMateria*)
+void MateriaSource::learnMateria(AMateria* materia)
 {  
-for (int i = 0; i < 4; i++)
-{
-    if( learned_materia[i] == NULL)
+    for (int i = 0; i < 4; i++)
     {
-        learned_materia[i]                           // TODO: 
+        if( learned_materia[i] == NULL)
+        {
+            learned_materia[i] =  materia;
+            std::cout << materia->getType() << " learned in slot " << i  << std::endl;
+            return;
+        }
     }
-    else
-    
+        delete materia;
+        std::cout << "maximum materia learned"  << std::endl;
 }
 
-   
-}
-
-AMateria* MateriaSource::createMateria(std::string const & type)
+AMateria* MateriaSource::createMateria(std::string const &type)
 {
-
+    for (int i = 0; i < 4; i++)
+    {
+        if (!type.compare(learned_materia[i]->getType()))
+        {   
+            std::cout << "Materia created in MateriaSource"  << std::endl;
+            return (learned_materia[i]->clone());
+        }
+    }
+    std::cout << "You need to learned this materia first"  << std::endl;
+    return NULL;
 }
-
-
 
 #endif

@@ -11,8 +11,8 @@ class Cure : public AMateria
         Cure();
         Cure(std::string type);
         ~Cure();
-        Cure* clone() const;
         void use(ICharacter&);
+        Cure* clone() const;
 };  
 
 Cure::Cure() : AMateria()

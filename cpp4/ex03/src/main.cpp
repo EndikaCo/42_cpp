@@ -6,12 +6,15 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 09:36:21 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/19 10:30:48 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/28 10:32:00 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/AMateria.hpp"
-#include "../inc/IMateriaSource.hpp"
+#include "../inc/MateriaSource.hpp"
+#include "../inc/Ice.hpp"
+#include "../inc/Cure.hpp"
+#include "../inc/Character.hpp"
 
 int main(int argc, char const *argv[])
 {

@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:12:48 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/27 10:58:32 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/28 11:02:53 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class ICharacter
     protected:
         std::string name;
         AMateria *materia[4];    
-        int     idx;
         
     public:
         virtual ~ICharacter() {}

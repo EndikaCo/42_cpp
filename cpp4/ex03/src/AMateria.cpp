@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 11:52:29 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/22 14:31:57 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/28 11:53:04 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <iostream>
 //AMateria default constructor
-AMateria::AMateria() 
+AMateria::AMateria() : type("blank")
 {
     std::cout << "AMateria default constructor called" << std::endl;  
 }

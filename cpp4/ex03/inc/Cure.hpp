@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/29 11:47:23 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/07/29 11:47:33 by ecorreia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CURE_HPP
 #define CURE_HPP
 
 #include "AMateria.hpp"
-
 
 class Cure : public AMateria
 {
@@ -14,32 +24,5 @@ class Cure : public AMateria
         void use(ICharacter&);
         Cure* clone() const;
 };  
-
-Cure::Cure() : AMateria()
-{
-    std::cout << "Cure default constructor called" << std::endl;
-}
-
-Cure::Cure(std::string type) : AMateria(type)
-{
-    std::cout << "Cure parameter constructor called" << std::endl;
-}
-
-Cure::~Cure()
-{
-    std::cout << "Cure destructor called" << std::endl;
-}
-
-Cure* Cure::clone() const
-{
-    std::cout << "Cure clone method called" << std::endl;
-    Cure *temp = new Cure(*this);
-    return (temp);
-}
-
-void Cure::use(ICharacter& character)
-{
-   std::cout << "* heals " << character.getName() << "'s wounds *" << std::endl;
-}
 
 #endif

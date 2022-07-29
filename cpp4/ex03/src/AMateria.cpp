@@ -6,11 +6,12 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 11:52:29 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/28 11:53:04 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/07/29 12:14:10 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/AMateria.hpp"
+
 
 #include <iostream>
 //AMateria default constructor
@@ -24,6 +25,12 @@ AMateria::AMateria(std::string const &type) : type(type)
     std::cout << "AMateria Parameter constructor called" << std::endl;
 }
 
+AMateria::AMateria( AMateria const & org)
+{
+    std::cout << "AMateria copy constructor called" << std::endl;
+    *this = org;  
+}
+
 //AMateria destructor
 AMateria::~AMateria()
 {
@@ -33,4 +40,12 @@ AMateria::~AMateria()
 std::string const & AMateria::getType() const
 {
     return (type);    
+}
+
+AMateria &AMateria::operator=(const AMateria& orig)
+{
+    std::cout << "AMateria assigment operator called" << std::endl; 
+    if (this != &orig)
+        type = orig.getType();
+    return (*this);
 }

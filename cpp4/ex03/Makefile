@@ -6,15 +6,20 @@
 #    By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 12:08:30 by ecorreia          #+#    #+#              #
-#    Updated: 2022/07/12 11:25:57 by ecorreia         ###   ########.fr        #
+#    Updated: 2022/07/29 12:02:46 by ecorreia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex03_Interface&recap
+NAME	=	ex03_Interfacerecap
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
-FILES	=	src/main		\
+FILES	=	src/main			\
+			src/AMateria		\
+			src/Character		\
+			src/Cure			\
+			src/Ice				\
+			src/MateriaSource	\
 	
 					
 SRCS	=	$(addsuffix .cpp, $(FILES))

@@ -6,17 +6,17 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:18:39 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/29 12:32:40 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/08/01 12:31:26 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/MateriaSource.hpp"
 
         
-MateriaSource::MateriaSource() : id(0)
+MateriaSource::MateriaSource()
 {
     std::cout << "MateriaSource default constructor called" << std::endl;
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 3; i++)
         learned_materia[i] = NULL;
 }
 
@@ -28,12 +28,12 @@ MateriaSource::MateriaSource(MateriaSource const &src) {
 MateriaSource::~MateriaSource()
 {
     std::cout << "MateriaSource destructor called" << std::endl;
-    delete[] learned_materia;
+    //delete[] learned_materia;
 }
 
 void MateriaSource::learnMateria(AMateria* materia)
 {  
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 3; i++)
     {
         if( learned_materia[i] == NULL)
         {
@@ -42,20 +42,35 @@ void MateriaSource::learnMateria(AMateria* materia)
             return;
         }
     }
-        delete materia;
+        //delete materia;
         std::cout << "maximum materia learned"  << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type)
 {
-    for (int i = 0; i < 4; i++)
+
+    for (int i = 0; i < 3; i++)
     {
+        std::cout << type << "i=" << i  << learned_materia[i]->getType() << std::endl;
+        
         if (!type.compare(learned_materia[i]->getType()))
-        {   
+        {
+            std::cout << "i=" << i << learned_materia[i]->getType()  << std::endl;
             std::cout << "Materia created in MateriaSource"  << std::endl;
             return (learned_materia[i]->clone());
         }
     }
     std::cout << "You need to learned this materia first"  << std::endl;
     return NULL;
+}
+
+MateriaSource& MateriaSource::operator=(const MateriaSource &src)
+{
+    std::cout << "MateriaSource = operator called" << std::endl;
+    //delete []learned_materia;
+    for (int i = 0; i < 3; i++)
+    {
+        learned_materia[i] = src.learned_materia[i]->clone();
+    }
+    return (*this);
 }

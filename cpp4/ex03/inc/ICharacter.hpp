@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:12:48 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/29 11:51:41 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/08/01 10:13:33 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include "AMateria.hpp"
-
+class AMateria; //class forward declaration
 //Interface for Character
 class ICharacter
 {

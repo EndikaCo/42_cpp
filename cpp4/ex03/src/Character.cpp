@@ -6,7 +6,7 @@
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 14:17:03 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/29 12:29:03 by ecorreia         ###   ########.fr       */
+/*   Updated: 2022/08/01 11:17:02 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Character::Character(std::string name) : name(name)
 //Character destructor
 Character::~Character()
 {
-    delete[] materia;
+    //delete[] materia;
     std::cout << "Character destructor called" << std::endl;    
 }
 
@@ -47,7 +47,7 @@ Character::Character(Character const &org)
 Character &Character::operator=(const Character &nc){
 	if (this != &nc)
     { 		
-        delete []materia;
+        //delete []materia;
         
         this->name = nc.name;
 

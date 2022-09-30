@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/Contact.hpp"
+# include "../inc/PhoneBook.hpp"
 
 void welcome_message()
 {
@@ -59,7 +59,11 @@ void search(Contact *contact)
 int main()
 {
     std::string command;
-    Contact contact[8];
+    //Contact contact[8];
+    
+    //◦ The PhoneBook must be represented as as an instance of a class in your code it must contain an array of contact.
+    PhoneBook PhoneBook;
+
     int  n_contacts;
 
     n_contacts = 0;
@@ -68,23 +72,12 @@ int main()
         welcome_message();
         std::getline(std::cin, command);
         if(!command.compare("ADD"))
-            if(!add(n_contacts, contact))
+            if(!add(n_contacts, PhoneBook.getContacts()))
                 n_contacts++;
         if(!command.compare("SEARCH"))
-            search(contact);
+            search(PhoneBook.getContacts());
         if(!command.compare("EXIT"))
-            return (0);
-        if(!command.compare("TEST"))
-        {
-            for(int i = 0; i < 8; i++)
-            {
-                contact[i].test();
-                n_contacts++; 
-                std::cout << "n_contacts:" << n_contacts << std::endl;
-            }
-            for(int i = 0; i < 8; i++)
-                contact[i].printContacts(i);   
-        }          
+            return (0);   
     }
 }
         

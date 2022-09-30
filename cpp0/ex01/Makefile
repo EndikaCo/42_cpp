@@ -14,9 +14,10 @@ NAME	=	ex01_my_contact_book
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM		=	rm -rf
-FILES	=	src/main 	\
-			src/Contact	\
-			src/utils	\
+FILES	=	src/main 		\
+			src/Contact		\
+			src/PhoneBook	\
+			src/utils		\
 					
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))

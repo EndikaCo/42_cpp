@@ -22,13 +22,14 @@ void Contact::addContact()
     std::cout << "Nickname:\n";
     std::getline(std::cin, nickname);
     std::cout << "PHONE:\n";
-
     std::getline(std::cin, phone);
     while (ft_isvalid(phone))
     {
         std::cout << "Type a valid Phone number:\n";
         std::getline(std::cin, phone);
     }
+    std::cout << "Darkest secret:\n";
+    std::getline(std::cin, darkest_secret);
 }
 
 void Contact::printContacts(int index)
@@ -49,16 +50,13 @@ void Contact::printMore(int index)
     std::cout << "INDEX:" << std::endl;
     std::cout << index + 1 << std::endl; 
     std::cout << "FIRST NAME:" << std::endl;
-    std::cout << ft_trunc(first_name) << std::endl;
+    std::cout << first_name << std::endl;
     std::cout << "LAST NAME:" << std::endl;
-    std::cout << ft_trunc(last_name) << std::endl;
+    std::cout << last_name << std::endl;
     std::cout << "NICKNAME:" << std::endl;
-    std::cout << ft_trunc(nickname) << std::endl;
+    std::cout << nickname << std::endl;
     std::cout << "PHONE:" << std::endl;
-    std::cout << ft_trunc(phone) << std::endl;
-}
-
-void Contact::test()
-{
-    first_name = (rand() % 26) + 65;
+    std::cout << phone << std::endl;
+    std::cout << "Darkest secret:" << std::endl;
+    std::cout << darkest_secret << std::endl;
 }

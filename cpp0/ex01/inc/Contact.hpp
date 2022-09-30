@@ -28,7 +28,7 @@ class Contact
         void addContact();
         void printContacts(int index);
         void printMore(int index);
-        void test();
+        std::string getData();
 };
 
 //UTILS

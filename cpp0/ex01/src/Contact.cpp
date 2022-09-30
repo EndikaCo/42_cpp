@@ -13,23 +13,36 @@
 # include <iomanip>
 # include "../inc/Contact.hpp"
 
+std::string Contact::getData()
+{   
+        std::string aux;
+    while(1)
+    {
+        std::getline(std::cin, aux);
+        if(aux.empty())
+            std::cout << "Field can't be empty, try again\n";  
+        else
+            return aux;
+    }
+}
+
 void Contact::addContact()
 { 
     std::cout << "First name:\n";
-    std::getline(std::cin, first_name);
+    first_name = getData();
     std::cout << "Last name:\n";
-    std::getline(std::cin, last_name);
+    last_name = getData();
     std::cout << "Nickname:\n";
-    std::getline(std::cin, nickname);
+    nickname = getData();
     std::cout << "PHONE:\n";
-    std::getline(std::cin, phone);
+    phone = getData() ;
     while (ft_isvalid(phone))
     {
         std::cout << "Type a valid Phone number:\n";
         std::getline(std::cin, phone);
     }
     std::cout << "Darkest secret:\n";
-    std::getline(std::cin, darkest_secret);
+    darkest_secret = getData() ;
 }
 
 void Contact::printContacts(int index)

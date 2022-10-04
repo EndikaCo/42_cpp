@@ -12,8 +12,6 @@
 
 #include "../inc/Zombie.hpp"
 
-//in STACK-> Zombie zombie = Zombie("Emanuel"); would be using constructor
-
 //in HEAP -> function that will create a Zombie, name it, and return it to be used somewhere else in your code.
 Zombie* newZombie(std::string name)
 {

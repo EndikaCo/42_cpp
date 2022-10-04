@@ -11,19 +11,17 @@
 /* ************************************************************************** */
 
 #include "../inc/Zombie.hpp"
+#include <stdio.h>
 
 int main()
 {
     std::string name;
-    std::string N;
     Zombie *zombie;
+    int N = 4;
     
-    std::cout << "Type the number of zombies:\n";
-    std::getline(std::cin, N);
-
     std::cout << "Name of the zombies:\n";
     std::getline(std::cin, name);
-    zombie = zombieHorde(std::stoi(N), name);
+    zombie = zombieHorde(N, name);
     
     delete []zombie;
     return 0;

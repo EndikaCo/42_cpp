@@ -26,5 +26,6 @@ public:
     Karen(/* args */);
     ~Karen();
     void complain( std::string level );
+    void(*member_pointer)(void);// declare pointers to member functions
 };
 #endif

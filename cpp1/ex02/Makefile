@@ -12,7 +12,7 @@
 
 NAME	=	ex02_HI_THIS_IS_BRAIN
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address -std=c++98 -pedantic
 RM		=	rm -rf
 FILES	=	main	
 					

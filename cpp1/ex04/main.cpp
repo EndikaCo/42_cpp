@@ -17,10 +17,15 @@
 int ft_error(std::string fileName)
 {
     std::cout << "Unable to open " << fileName << std::endl;
-        exit(EXIT_FAILURE);
+        exit(1);
 }
 
-void ft_stream(std::string fileName,std::string s1, std::string s2)
+/**
+ * @param fileName filename with text
+ * @param s1 string in filename to replace
+ * @param s2 string to reoplace it with
+ */
+void ft_stream(std::string fileName, std::string s1, std::string s2)
 {
     std::ifstream   inputStream(fileName); //variable for reading input
     std::ofstream   outputStream; //variable for writting output
@@ -44,15 +49,13 @@ void ft_stream(std::string fileName,std::string s1, std::string s2)
         }
         outputStream << line << std::endl;
     }    
-   
     inputStream.close();
     outputStream.close();
 }
 
 int main(int argc, char**argv)
 {
-    std::string     fileName;
-    if(argc < 3)
+    if(argc != 4)
     {
         std::cout << "Argument error" << std::endl;
         return(1);

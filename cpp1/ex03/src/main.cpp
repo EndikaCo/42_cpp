@@ -12,7 +12,6 @@
 
 #include "../inc/HumanA.hpp"
 #include "../inc/HumanB.hpp"
-//#include "../inc/Weapon.hpp"
 
 int main()
 {

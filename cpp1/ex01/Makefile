@@ -12,7 +12,7 @@
 
 NAME	=	ex01_Moar_brainz!
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address -std=c++98 -pedantic
 RM		=	rm -rf
 FILES	=	src/Zombie 	\
 			src/main	\
@@ -27,7 +27,7 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o: $(FILES)
+.cpp.o: $(FILES)
 	@$(CC) $(FLAGS) -c -o $@ $<
 
 clean:

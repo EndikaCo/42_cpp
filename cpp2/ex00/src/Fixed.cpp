@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecorreia <ecorreia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 09:51:06 by ecorreia          #+#    #+#             */
-/*   Updated: 2022/07/01 13:21:31 by ecorreia         ###   ########.fr       */
+/*   Created: 2022/10/05 12:16:19 by ecorreia          #+#    #+#             */
+/*   Updated: 2022/10/05 12:16:19 by ecorreia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ Fixed::~Fixed()
 //A copy constructor.
 Fixed::Fixed(Fixed const &orig)
 {
-    *this = orig;
     std::cout << "Copy constructor called\n";
+    *this = orig; //*this gives us the object to which the pointer "this" points.
 	return ;
 }
 
@@ -42,14 +42,14 @@ Fixed& Fixed::operator=(Fixed const& a)
 }
 
 //A member function that returns the raw value of the fixed point value.
-int Fixed::getRawBits( void ) const
+int Fixed::getRawBits(void) const
 {
     std::cout << "getRawBits member function called\n";
     return (fixedPoint); 
 }
 
 //A member function that sets the raw value of the fixed point value.
-void Fixed::setRawBits( int const raw )
+void Fixed::setRawBits(int const raw)
 {
     fixedPoint = raw;    
 }

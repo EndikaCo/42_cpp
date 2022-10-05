@@ -1,0 +1,36 @@
+
+this    ->address of the object for which the function is called. 
+*this   ->object to which the pointer this was pointing.
+
+
+
+Ad-hoc polymorphism:
+--------------------
+también llamado sobrecarga(de funciones o operadores) o Polimorfismo estático
+
+Permite que las funciones que tienen el mismo nombre actúen de manera 
+diferente para diferentes tipos.
+
+Los tipos a los que se aplica el polimorfismo deben ser explícitos 
+y declarados uno por uno antes de poder ser utilizados.
+
+ejemplo:
+
+int     sum(int x, int y);
+string  sum(const char* x, const char* y);
+
+Operators overload:
+-------------------
+change the way operators work for user-defined types like objects and structures
+
+ejemplo:
+//An assignation operator overload.
+Fixed& Fixed::operator=(Fixed const& a)
+{
+    this->fixedPoint = a.getRawBits();
+    return (*this);
+}
+
+
+Orthodox canonical classes:
+---------------------------

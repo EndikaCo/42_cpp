@@ -69,7 +69,6 @@ std::ostream& operator<<(std::ostream& output, const Fixed& fixedP)
 //A member function that returns the raw value of the fixed point value.
 int Fixed::getRawBits( void ) const
 {
-    //std::cout << "getRawBits member function called\n";
     return (fixedPoint); 
 }
 

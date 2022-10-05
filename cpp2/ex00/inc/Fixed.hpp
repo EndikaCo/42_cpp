@@ -24,8 +24,8 @@ public:
     ~Fixed();
     Fixed(Fixed const &orig);
     Fixed &operator=(Fixed const &a);
-    int getRawBits( void ) const; 
-    void setRawBits( int const raw ); 
+    int getRawBits(void) const;
+    void setRawBits(int const raw);
 };
 
 #endif

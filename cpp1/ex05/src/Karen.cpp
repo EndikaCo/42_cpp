@@ -23,7 +23,6 @@ Karen::~Karen()
 
 void Karen::complain( std::string level)
 {
-    void(Karen::*member_pointer)(void);// declare pointers to member functions
     int i;
 
 	std::string levels[] ={"DEBUG", "INFO", "WARNING", "ERROR"};
@@ -36,22 +35,21 @@ void Karen::complain( std::string level)
     switch (i)
     {
         case 0:
-            member_pointer = &Karen::debug;
+        (this->*(&Karen::debug))();
             break;
         case 1:
-            member_pointer = &Karen::info;
+            (this->*(&Karen::info))();
            break;
         case 2:
-            member_pointer = &Karen::warning;
+            (this->*(&Karen::warning))();
             break;
         case 3:
-            member_pointer = &Karen::error;;
+            (this->*(&Karen::error))();
             break;
-         case 4:
-             std::cout << "Type: \"DEBUG\", \"INFO\", \"WARNING\" or \"ERROR\" to select the Karen complaint\n";
-             return;
+        case 4:
+            std::cout << "Type: \"DEBUG\", \"INFO\", \"WARNING\" or \"ERROR\" to select the Karen complaint\n";
+            return;
     }
-    (this->*(member_pointer))();
 }
 
 void Karen::debug( void ){

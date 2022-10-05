@@ -12,7 +12,7 @@
 
 NAME	=	ex06_Karen_filter
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address -std=c++98 -pedantic
 RM		=	rm -rf
 FILES	=	src/main	\
 			src/Karen

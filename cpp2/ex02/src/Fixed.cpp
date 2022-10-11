@@ -50,7 +50,8 @@ Fixed::Fixed(Fixed const &orig)
 	return ;
 }
 
-/*COMPARISON OVERLOAD OPERATORS*/
+
+
 //comparison overload operator >
 bool Fixed::operator>(Fixed const &a)const
 {
@@ -90,12 +91,13 @@ Fixed& Fixed::operator=(Fixed const& a)
     return (*this);
 }
 
-/*ARITMETHIC OPERATORS*/
+
+
 //arithmetic overloads operators +
 Fixed Fixed::operator+(Fixed const &a) const
 {
     Fixed fixed;
-     fixed = fixedPoint + a.fixedPoint;
+    fixed = fixedPoint + a.fixedPoint;
     return (fixed); 
 }
 //arithmetic overloads operators -

@@ -22,15 +22,17 @@ int main( void )
     Point point1(10, 35.05f);
     Point point2(10, 34.95f);
 
+	std::cout << "TEST 1:" << std::endl;
 	if (bsp(a, b, c, point1) == true)
-		std::cout << "point1 is inside of a triangle" << std::endl;
+		std::cout << "point1 is inside the triangle" << std::endl;
 	else
-		std::cout << "point1 isn't inside of a triangle" << std::endl;
-	
+		std::cout << "point1 isn't inside the triangle" << std::endl;
+		
+	std::cout << "TEST 2:" << std::endl;
     if (bsp(a, b, c, point2) == true)
-		std::cout << "point2 is inside of a triangle" << std::endl;
+		std::cout << "point2 is inside the triangle" << std::endl;
 	else
-		std::cout << "point2 isn't inside of a triangle" << std::endl;
+		std::cout << "point2 isn't inside the triangle" << std::endl;
     
     return (0);
 }

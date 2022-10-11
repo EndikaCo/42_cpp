@@ -23,9 +23,9 @@ public:
     Fixed();
     ~Fixed();
     Fixed(Fixed const &orig);
-    Fixed &operator=(Fixed const &a);
-    int getRawBits(void) const;
+    Fixed &operator=(Fixed const &a); //Fixed to the left is const (may not be changed to have a different value).
+    int getRawBits(void) const; //*this is constant inside member function (entire function declaration to the left is const)
     void setRawBits(int const raw);
-};
+};  
 
 #endif

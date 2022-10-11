@@ -19,10 +19,10 @@ ejemplo:
 int     sum(int x, int y);
 string  sum(const char* x, const char* y);
 
+
 Operators overload:
 -------------------
 change the way operators work for user-defined types like objects and structures
-
 ejemplo:
 //An assignation operator overload.
 Fixed& Fixed::operator=(Fixed const& a)
@@ -34,3 +34,71 @@ Fixed& Fixed::operator=(Fixed const& a)
 
 Orthodox canonical classes:
 ---------------------------
+
+
+
+CONST:
+
+
+this    ->address of the object for which the function is called. 
+*this   ->object to which the pointer this was pointing.
+
+
+
+Ad-hoc polymorphism:
+--------------------
+también llamado sobrecarga(de funciones o operadores) o Polimorfismo estático
+
+Permite que las funciones que tienen el mismo nombre actúen de manera 
+diferente para diferentes tipos.
+
+Los tipos a los que se aplica el polimorfismo deben ser explícitos 
+y declarados uno por uno antes de poder ser utilizados.
+
+ejemplo:
+
+int     sum(int x, int y);
+string  sum(const char* x, const char* y);
+
+
+Operators overload:
+-------------------
+change the way operators work for user-defined types like objects and structures
+ejemplo:
+//An assignation operator overload.
+Fixed& Fixed::operator=(Fixed const& a)
+{
+    this->fixedPoint = a.getRawBits();
+    return (*this);
+}
+
+
+Orthodox canonical classes:
+---------------------------
+default construcot
+a destrucotr 
+a copy constructor
+an assignation operator
+
+
+CONST:
+
+// v───v───v───v───v───v───v───v───v───v───v───v─┬┐
+//                                               ││
+//  v──#1    v─#2             v──#3    v─#4      #5
+   int const * const Method3(int const * const&) const;
+then read it from right to left.
+
+#5 says that the entire function declaration to the left is const, which implies that this is necessarily a member function rather than a free function.
+
+#4 says that the pointer to the left is const (may not be changed to point to a different address).
+
+#3 says that the int to the left is const (may not be changed to have a different value).
+
+#2 says that the pointer to the left is const.
+
+#1 says that the int to the left is const.
+
+Putting it all together, you can read this as a const member function named Method3 that takes a reference to a const pointer to an int const (or a const int, if you prefer) and returns a const pointer to an int const (const int).
+
+(N.b. #2 is entirely superfluous.)

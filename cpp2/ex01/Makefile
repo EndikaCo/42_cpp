@@ -12,7 +12,7 @@
 
 NAME	=	ex01_Towards_a_more_useful_fixed_point_class
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -g -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -g -std=c++98 -pedantic -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/Fixed	\
 			src/main	

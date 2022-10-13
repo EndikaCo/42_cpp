@@ -12,7 +12,7 @@
 
 NAME	=	ex00_Aaaaand...OPEN!
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -std=c++98 -pedantic -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/ClapTrap	\
 			src/main	

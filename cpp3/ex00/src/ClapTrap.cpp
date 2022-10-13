@@ -15,7 +15,10 @@
 // ClapTrap default constructor
 ClapTrap::ClapTrap(std::string nm) : name(nm)
 {
-    std::cout << name << " Constructor called\n";
+	hitPoints = 10;
+	energyPoints = 10;
+	attackDamage = 0;
+	std::cout << name << " Constructor called\n";
 }
 // ClapTrap desstructor
 ClapTrap::~ClapTrap()

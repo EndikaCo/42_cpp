@@ -14,20 +14,20 @@
 
 std::string const & Weapon::getType()
 {
-    return type;
+	return type;
 }
 
 void  Weapon::setType(std::string type)
 {
-    this->type = type;
+	this->type = type;
 }
 
 Weapon::Weapon(std::string type)
 {
-    setType(type);
+	setType(type);
 }
 
 Weapon::~Weapon()
 {
-    std::cout << "Weapon destroyed"  << std::endl;
+	std::cout << "Weapon destroyed"  << std::endl;
 }

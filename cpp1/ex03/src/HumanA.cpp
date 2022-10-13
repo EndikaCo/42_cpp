@@ -18,10 +18,10 @@ HumanA::HumanA(std::string name, Weapon &weapon): name(name), weapon(weapon)
 
 HumanA::~HumanA()
 {
-   std::cout << "Destroyed"  << std::endl;
+	std::cout << "Destroyed"  << std::endl;
 }
 
 void HumanA::attack()
 {
-   std::cout << name << " attacks with his " << weapon.getType() << std::endl;
+	std::cout << name << " attacks with his " << weapon.getType() << std::endl;
 }

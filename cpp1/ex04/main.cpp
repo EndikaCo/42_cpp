@@ -16,8 +16,8 @@
 
 int ft_error(std::string fileName)
 {
-    std::cout << "Unable to open " << fileName << std::endl;
-        exit(1);
+	std::cout << "Unable to open " << fileName << std::endl;
+		exit(1);
 }
 
 /**
@@ -27,40 +27,40 @@ int ft_error(std::string fileName)
  */
 void ft_stream(std::string fileName, std::string s1, std::string s2)
 {
-    std::ifstream   inputStream(fileName); //variable for reading input
-    std::ofstream   outputStream; //variable for writting output
-    std::string     line;
-    int pos;
-    
-    if(!inputStream.is_open()) //checks if can be opened
-        ft_error(fileName);
-    fileName = fileName.append(".replace");
-    outputStream.open(fileName, std::ofstream::out);// creates the file
-    if(!outputStream.is_open())
-        ft_error(fileName);
-    
-    while(std::getline(inputStream, line))
-    {
-        pos = 0;
-        while((pos = line.find(s1)) != -1)
-        {
-            line.erase(pos, s1.length());
-            line.insert(pos, s2);
-        }
-        outputStream << line << std::endl;
-    }    
-    inputStream.close();
-    outputStream.close();
+	std::ifstream	inputStream(fileName); //variable for reading input
+	std::ofstream	outputStream; //variable for writting output
+	std::string		line;
+	int pos;
+	
+	if(!inputStream.is_open()) //checks if can be opened
+		ft_error(fileName);
+	fileName = fileName.append(".replace");
+	outputStream.open(fileName, std::ofstream::out);// creates the file
+	if(!outputStream.is_open())
+		ft_error(fileName);
+	
+	while(std::getline(inputStream, line))
+	{
+		pos = 0;
+		while((pos = line.find(s1)) != -1)
+		{
+			line.erase(pos, s1.length());
+			line.insert(pos, s2);
+		}
+		outputStream << line << std::endl;
+	}
+	inputStream.close();
+	outputStream.close();
 }
 
 int main(int argc, char**argv)
 {
-    if(argc != 4)
-    {
-        std::cout << "Argument error" << std::endl;
-        return(1);
-    }
-    ft_stream(argv[1], argv[2], argv[3]);
+	if(argc != 4)
+	{
+		std::cout << "Argument error" << std::endl;
+		return(1);
+	}
+	ft_stream(argv[1], argv[2], argv[3]);
 
-    return (0);
+	return (0);
 }

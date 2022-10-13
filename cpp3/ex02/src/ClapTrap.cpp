@@ -15,6 +15,9 @@
 // ClapTrap default constructor
 ClapTrap::ClapTrap(): name("Bot")
 {
+	hitPoints = 10;
+	energyPoints = 10;
+	attackDamage = 0; 
     std::cout << name << " Claptrap default constructor called\n";
 }
 

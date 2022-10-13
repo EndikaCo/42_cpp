@@ -12,7 +12,7 @@
 
 NAME	=	ex03_Now_its_weird!
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -std=c++98 -pedantic -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/ClapTrap	\
 			src/ScavTrap	\

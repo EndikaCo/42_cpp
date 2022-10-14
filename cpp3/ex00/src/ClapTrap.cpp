@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+    /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
@@ -13,23 +13,32 @@
 #include "../inc/ClapTrap.hpp"
 
 // ClapTrap default constructor
+    ClapTrap::ClapTrap() : name("example")
+    {
+        hitPoints = 10;
+        energyPoints = 10;
+        attackDamage = 0;
+        std::cout << name << " ClapTrap constructor called\n";
+    }
+
+// ClapTrap parameter constructor
 ClapTrap::ClapTrap(std::string nm) : name(nm)
 {
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
-	std::cout << name << " Constructor called\n";
+	std::cout << name << " ClapTrap constructor called\n";
 }
-// ClapTrap desstructor
+// ClapTrap destructor
 ClapTrap::~ClapTrap()
 {
-    std::cout << name << " Destructor called\n";
+    std::cout << name << " ClapTrap Destructor called\n";
 }
 // ClapTrap copy constructor
 ClapTrap::ClapTrap(ClapTrap &orig)
 {
     *this = orig;
-    std::cout << name << " Copy constructor called\n";
+    std::cout << name << " ClapTrap Copy constructor called\n";
 }
 // ClapTrap getter for name
 std::string ClapTrap::getName(void)
@@ -45,7 +54,7 @@ int ClapTrap::getHitPoints(void)
 //Fixed assignation operator overload.
 ClapTrap& ClapTrap::operator=(ClapTrap const& a)
 {
-    std::cout << "Assignation operator called\n";
+    std::cout << "ClapTrap Assignation operator called\n";
     name = a.name;
     hitPoints = a.hitPoints;
     energyPoints = a.energyPoints;

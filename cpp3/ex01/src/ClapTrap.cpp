@@ -13,16 +13,13 @@
 #include "../inc/ClapTrap.hpp"
 
 // ClapTrap default constructor
-ClapTrap::ClapTrap(): name("Bot")
+ClapTrap::ClapTrap(): name("Bot"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	hitPoints = 10;
-	energyPoints = 10;
-	attackDamage = 0; 
-	std::cout << name << "   Claptrap default constructor called\n";
+	std::cout << name << " Claptrap default constructor called\n";
 }
 
 // ClapTrap parameter constructor
-ClapTrap::ClapTrap(std::string nm) : name(nm)
+ClapTrap::ClapTrap(std::string nm) : name(nm), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << name << " Claptrap parameter constructor called\n";
 }

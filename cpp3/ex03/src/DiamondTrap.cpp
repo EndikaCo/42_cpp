@@ -12,9 +12,9 @@
 
 #include "../inc/DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(/* args */) : ClapTrap("bot_clap_name"), FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap(/* args */) : ClapTrap("default_clap_name"), FragTrap(), ScavTrap()
 {
-    this->name = "bot";
+    this->name = "default";
     this->FragTrap::hitPoints;
 	this->ScavTrap::energyPoints;
 	this->FragTrap::attackDamage;
@@ -56,5 +56,28 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &orig)
 //display its name and its clapTrap name.
 void DiamondTrap::whoAmI()
 {
-    std::cout << " claptrap name-> " << ClapTrap::name << " this name -> " << name << std::endl; 
+    std::cout << "claptrap name-> " << ClapTrap::name << ", DiamondTrap name -> " << name << std::endl;
+}
+
+
+void DiamondTrap::attack(std::string const & target)
+{
+    std::cout << "DiamondTrap " << name << " attacks " << target
+              << " causing " << hitPoints << " points of damage!\n";
+}
+
+void DiamondTrap::takeDamage(unsigned int amount)
+{
+    energyPoints -= amount;
+    std::cout << "DiamondTrap " << name << " received: "
+              << amount << " points of damage. "<< energyPoints
+              << " energy points remaining" <<std::endl;
+}
+
+void DiamondTrap::beRepaired(unsigned int amount)
+{
+    energyPoints += amount;
+    std::cout << "DiamondTrap " << name << " repaired: "
+              << amount << " energy points. "<< energyPoints
+              << " energy points remaining" <<std::endl;
 }

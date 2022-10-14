@@ -17,14 +17,16 @@
 
 class FragTrap : virtual public ClapTrap
 {
-    private:
-        
     public:
         FragTrap();
         FragTrap(std::string name);
         ~FragTrap();
         FragTrap(FragTrap const &orig);
         void highFivesGuys(void);
+
+        void attack(std::string const & target);
+        void takeDamage(unsigned int amount);
+        void beRepaired(unsigned int amount);
 };
 
 #endif

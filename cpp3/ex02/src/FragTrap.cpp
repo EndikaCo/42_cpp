@@ -13,7 +13,7 @@
 #include "../inc/FragTrap.hpp"
 
 // default constructor
-FragTrap::FragTrap() : ClapTrap()
+FragTrap::FragTrap() : ClapTrap(), name("default")
 {
     hitPoints = 100;
     energyPoints = 100;
@@ -46,4 +46,26 @@ FragTrap::FragTrap(FragTrap const &orig)
 void FragTrap::highFivesGuys(void)
 {
         std::cout << name <<" says: Give me a high five¡\n";
+}
+
+void FragTrap::attack(std::string const & target)
+{
+    std::cout << "FragTrap " << name << " attacks " << target
+              << " causing " << hitPoints << " points of damage!\n";
+}
+
+void FragTrap::takeDamage(unsigned int amount)
+{
+    energyPoints -= amount;
+    std::cout << "FragTrap " << name << " received: "
+              << amount << " points of damage. "<< energyPoints
+              << " energy points remaining" <<std::endl;
+}
+
+void FragTrap::beRepaired(unsigned int amount)
+{
+    energyPoints += amount;
+    std::cout << "FragTrap " << name << " repaired: "
+              << amount << " energy points. "<< energyPoints
+              << " energy points remaining" <<std::endl;
 }

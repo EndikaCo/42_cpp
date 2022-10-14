@@ -34,7 +34,6 @@ int main()
     clap2.takeDamage(clap1.getHitPoints());
     clap2.beRepaired(5);
     clap2.takeDamage(5);
-    clap2.takeDamage(5);
     std::cout << "SCAV\n";
     scav1.attack(scav2.getName());
     scav2.takeDamage(scav1.getHitPoints());

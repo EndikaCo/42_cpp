@@ -13,7 +13,7 @@
 #include "../inc/FragTrap.hpp"
 
 // default constructor
-FragTrap::FragTrap() : ClapTrap(), name("default")
+FragTrap::FragTrap() : ClapTrap()
 {
     hitPoints = 100;
     energyPoints = 100;

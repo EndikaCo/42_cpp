@@ -37,5 +37,4 @@ class ClapTrap
         int getHitPoints(void);
         
 };
-
 #endif

@@ -26,8 +26,8 @@ $(NAME): $(OBJS) $(SRCS)
 
 all: $(NAME)
 
-.c.o:
-	@$(CC) $(FLAGS) -cpp -o $@ $<
+.cpp.o: $(SRCS)
+	$(CC) $(FLAGS) -c $^ -o $@
 
 clean:
 	$(RM) $(OBJS)

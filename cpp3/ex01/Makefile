@@ -21,14 +21,14 @@ FILES	=	src/ClapTrap	\
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))
 
-$(NAME): $(OBJS) $(SRCS)
-	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 	@echo compilado ok
 
 all: $(NAME)
 
-.c.o:
-	@$(CC) $(FLAGS) -cpp -o $@ $<
+.cpp.o: $(SRCS)
+	$(CC) $(FLAGS) -c $^ -o $@
 
 clean:
 	$(RM) $(OBJS)

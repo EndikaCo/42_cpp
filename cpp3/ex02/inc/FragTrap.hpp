@@ -30,5 +30,4 @@ class FragTrap : public ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 };
-
 #endif

@@ -16,7 +16,7 @@ int main()
 {
     ClapTrap clap1("Aurelio");
     ClapTrap clap2("Zaturnino");
-    
+
     clap1.attack(clap2.getName());
     clap2.takeDamage(clap1.getHitPoints());
     clap2.beRepaired(5);

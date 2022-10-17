@@ -21,15 +21,14 @@ int main()
 	ScavTrap scav1("Emanuel");
 	ScavTrap scav2("Wilson");
 
-    std::cout << "TEST CLAPTRAP" << std::endl;
+	std::cout << "TEST CLAPTRAP" << std::endl;
 	clap1.attack(clap2.getName());
 	clap2.takeDamage(clap1.getHitPoints());
 	clap2.beRepaired(5);
 	clap2.takeDamage(5);
 
-    std::cout << "TEST SCAVTRAP" << std::endl;
+	std::cout << "TEST SCAVTRAP" << std::endl;
 	scav1.attack(scav2.getName());
 	scav2.takeDamage(scav1.getHitPoints());
 	scav2.guardGate();
-
 }

@@ -28,5 +28,4 @@ class FragTrap : virtual public ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 };
-
 #endif

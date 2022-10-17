@@ -32,9 +32,8 @@ class DiamondTrap : public ScavTrap, FragTrap
         void attack(std::string const & target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-
+		using	ScavTrap::attack;
         std::string getName(void);
 
 };
-
 #endif

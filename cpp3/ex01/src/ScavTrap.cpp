@@ -16,7 +16,7 @@
 #include <iostream>
 
 //default constructor inherit from ClapTrap 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap() : ClapTrap("Example")
 {   
     hitPoints = 100;
     energyPoints = 50;

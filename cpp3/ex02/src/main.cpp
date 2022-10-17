@@ -38,8 +38,4 @@ int main()
     std::cout << "FRAG\n";
     frag1.attack(scav1.getName());
     frag2.highFivesGuys();
-    
-    
-
-
 }

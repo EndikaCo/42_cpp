@@ -43,6 +43,7 @@ int main()
     frag2.highFivesGuys();
     std::cout << "DIAMOND\n";
     diamond1.whoAmI();
+    diamond2.whoAmI();
     diamond2.attack(diamond1.getName());
     diamond1.takeDamage(diamond1.getHitPoints());
     std::cout << "DESTROY\n";

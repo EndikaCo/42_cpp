@@ -15,18 +15,18 @@
 DiamondTrap::DiamondTrap(/* args */) : ClapTrap("default_clap_name"), FragTrap(), ScavTrap()
 {
     this->name = "default";
-    this->FragTrap::hitPoints;
-	this->ScavTrap::energyPoints;
-	this->FragTrap::attackDamage;
+    this->hitPoints = FragTrap::hitPoints;
+    this->energyPoints = ScavTrap::energyPoints;
+    this->attackDamage = FragTrap::attackDamage;
     std::cout << this->name << " DiamondTrap default constructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(), ScavTrap()
 {
     this->name = name;
-	this->FragTrap::hitPoints;
-	this->ScavTrap::energyPoints;
-	this->FragTrap::attackDamage;
+	this->hitPoints = FragTrap::hitPoints;
+	this->energyPoints = ScavTrap::energyPoints;
+	this->attackDamage = FragTrap::attackDamage;
     std::cout << this->name << " DiamondTrap parameter constructor called" << std::endl;
 }
 
@@ -80,4 +80,10 @@ void DiamondTrap::beRepaired(unsigned int amount)
     std::cout << "DiamondTrap " << name << " repaired: "
               << amount << " energy points. "<< energyPoints
               << " energy points remaining" <<std::endl;
+}
+
+// ClapTrap getter for name
+std::string DiamondTrap::getName(void)
+{
+    return (name);
 }

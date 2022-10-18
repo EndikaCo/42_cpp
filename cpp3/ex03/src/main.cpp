@@ -44,8 +44,10 @@ int main()
     std::cout << "DIAMOND\n";
     diamond1.whoAmI();
     diamond2.whoAmI();
-	diamond1.guardGate ();
-    diamond2.attack(diamond1.getName());
+	diamond1.guardGate();
+    diamond2.highFivesGuys();
+    diamond1.ScavTrap::attack(diamond1.getName());
     diamond1.takeDamage(diamond1.getHitPoints());
+    diamond1.beRepaired(10);
     std::cout << "DESTROY\n";
 }

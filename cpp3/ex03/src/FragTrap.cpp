@@ -69,3 +69,9 @@ void FragTrap::beRepaired(unsigned int amount)
               << amount << " energy points. "<< energyPoints
               << " energy points remaining" <<std::endl;
 }
+
+// FragTrap getter for name
+std::string FragTrap::getName(void)
+{
+    return (name);
+}

@@ -74,3 +74,10 @@ void ScavTrap::beRepaired(unsigned int amount)
               << amount << " energy points. "<< energyPoints
               << " energy points remaining" <<std::endl;
 }
+
+// ScavTrap getter for name
+std::string ScavTrap::getName(void)
+{
+    return (name);
+}
+

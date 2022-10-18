@@ -18,9 +18,6 @@ DiamondTrap::DiamondTrap(/* args */) : ClapTrap("default_clap_name"), ScavTrap()
     this->hitPoints = FragTrap::hitPoints;
     this->energyPoints = ScavTrap::energyPoints;
     this->attackDamage = FragTrap::attackDamage;
-	std::cout << this->attackDamage << std::endl;
-	std::cout << this->hitPoints << std::endl;
-	std::cout << this->energyPoints << std::endl;
     std::cout << this->name << " DiamondTrap default constructor called" << std::endl;
 }
 
@@ -62,13 +59,6 @@ void DiamondTrap::whoAmI()
     std::cout << "claptrap name-> " << ClapTrap::name << ", DiamondTrap name -> " << name << std::endl;
 }
 
-
-void DiamondTrap::attack(std::string const & target)
-{
-    std::cout << "DiamondTrap " << name << " attacks " << target
-              << " causing " << hitPoints << " points of damage!\n";
-}
-
 void DiamondTrap::takeDamage(unsigned int amount)
 {
     energyPoints -= amount;
@@ -85,8 +75,21 @@ void DiamondTrap::beRepaired(unsigned int amount)
               << " energy points remaining" <<std::endl;
 }
 
-// ClapTrap getter for name
+// DiamondTrap getter for name
 std::string DiamondTrap::getName(void)
 {
     return (name);
+}
+
+//will display a positive high fives request on the standard output.
+void DiamondTrap::highFivesGuys(void)
+{
+    std::cout << name <<" says: Give me a high five¡\n";
+}
+
+/*Will display a message on the standard outputs to anounce that ScavTrap have enterred
+in Gate keeper mode.*/
+void DiamondTrap::guardGate()
+{
+    std::cout << "DiamondTrap " << name << " have enterred in Gate keeper mode\n";
 }

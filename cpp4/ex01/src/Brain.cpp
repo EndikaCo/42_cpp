@@ -34,3 +34,4 @@ void Brain::setIdea(std::string idea)
                 n++;
         ideas[n] = idea;
 }
+

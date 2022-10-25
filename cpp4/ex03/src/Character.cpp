@@ -33,6 +33,12 @@ Character::Character(std::string name) : name(name)
 //Character destructor
 Character::~Character()
 {
+    for(int i=0; i < 4; i++)
+    {
+        if(materia[i] != NULL)
+            delete materia[i];
+    }
+
     std::cout << "Character destructor called" << std::endl;
 }
 
@@ -70,7 +76,7 @@ void Character::equip(AMateria* m)
         if( materia[i] == NULL)
         {
             materia[i] =  m->clone();
-            std::cout << m->getType() << " equiped in slot " << i  << std::endl;
+            std::cout << materia[i]->getType() << " equiped in slot " << i  << std::endl;
             return;
         }
     }

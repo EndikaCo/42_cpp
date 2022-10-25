@@ -24,6 +24,5 @@ class Dog : public Animal
         void makeSound(void) const;
 };
 
-
-
 #endif
+

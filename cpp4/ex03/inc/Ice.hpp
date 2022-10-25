@@ -23,8 +23,8 @@ class Ice : public AMateria
         virtual ~Ice();
         void use(ICharacter& character);
         Ice* clone() const;
-        Ice(Ice const &r);//copy
-        Ice	&operator=(Ice const &r);// = operator
+        Ice(Ice const &org);//copy
+        Ice	&operator=(Ice const &org);// = operator
 };
 
 #endif

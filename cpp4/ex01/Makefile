@@ -12,7 +12,7 @@
 
 NAME	=	ex01_I_dont_want_to_set_the_world_on_fire
 CC		=	clang++
-FLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
+FLAGS	=	-Wall -Wextra -Werror -g3 -std=c++98 -pedantic -fsanitize=address
 RM		=	rm -rf
 FILES	=	src/main		\
 			src/Animal		\
@@ -25,14 +25,14 @@ FILES	=	src/main		\
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))
 
-$(NAME): $(OBJS) $(SRCS)
+$(NAME): $(OBJS)
 	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 	@echo compilado ok
 
 all: $(NAME)
 
-.c.o:
-	@$(CC) $(FLAGS) -cpp -o $@ $<
+.cpp.o: $(SRCS)
+	$(CC) $(FLAGS) -c $^ -o $@
 
 clean:
 	$(RM) $(OBJS)

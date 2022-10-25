@@ -23,24 +23,25 @@ Ice::~Ice()
     std::cout << "Ice destructor called" << std::endl;
 }
 
-void Ice::use(ICharacter& character)
-{
-    std::cout << "* shoots an ice bolt at " << character.getName() << " *" << std::endl;
-}
-
 Ice* Ice::clone() const
 {
     std::cout << "Ice clone method called" << std::endl;
     return (new Ice(*this));
 }
 
-Ice	&Ice::operator=(Ice const &r){
-    type = r.type;
+void Ice::use(ICharacter& character)
+{
+    std::cout << "* shoots an ice bolt at " << character.getName() << " *" << std::endl;
+}
+
+Ice	&Ice::operator=(Ice const &org){
+    std::cout << "Ice = operator Called" << std::endl;
+    type = org.type;
     return *this;
 }
 
-Ice::Ice(Ice const &r){
+Ice::Ice(Ice const &org){
 	std::cout << "Ice Copy Constructor Called" << std::endl;
-    *this = r;
+    *this = org;
 }
 

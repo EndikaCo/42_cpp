@@ -40,7 +40,7 @@ Cure &Cure::operator=(Cure const &org){
     return *this;
 }
 
-Cure::Cure(Cure const &r){
+Cure::Cure(Cure const &org){
 	std::cout << "Cure Copy Constructor Called" << std::endl;
-    *this = r;
+    *this = org;
 }

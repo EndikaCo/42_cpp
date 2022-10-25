@@ -20,11 +20,12 @@ class Cure : public AMateria
     public:
         Cure();
         virtual ~Cure();
-        void use(ICharacter&);
+        void use(ICharacter& character);
         Cure* clone() const;
+        Cure(Cure const &org);           //copy
         Cure &operator=(Cure const &org);    //= operator
-        Cure(Cure const &r);           //copy
 
 };  
 
 #endif
+

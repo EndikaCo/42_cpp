@@ -30,6 +30,4 @@ class Cat : public Animal
         void b_setIdea(std::string idea);
 };
 
-
-
 #endif

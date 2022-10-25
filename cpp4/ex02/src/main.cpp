@@ -30,6 +30,5 @@ int main()
     animals[3]->makeSound();
     
     for (int i = 0; i < 4; i++)
-        delete animals[i];  
-    
+        delete animals[i];
 }

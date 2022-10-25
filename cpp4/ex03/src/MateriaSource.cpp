@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #include "../inc/MateriaSource.hpp"
-
+#include <iostream>
         
 MateriaSource::MateriaSource()
 {
     std::cout << "MateriaSource default constructor called" << std::endl;
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
         learned_materia[i] = NULL;
 }
 
@@ -27,12 +27,18 @@ MateriaSource::MateriaSource(MateriaSource const &src) {
 
 MateriaSource::~MateriaSource()
 {
+    for(int i=0; i < 4; i++)
+    {
+        if(learned_materia[i] != NULL)
+            delete learned_materia[i];
+    }
+
     std::cout << "MateriaSource destructor called" << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria* materia)
 {  
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
         if( learned_materia[i] == NULL)
         {
@@ -48,7 +54,7 @@ void MateriaSource::learnMateria(AMateria* materia)
 AMateria* MateriaSource::createMateria(std::string const &type)
 {
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
         if (!type.compare(learned_materia[i]->getType()))
         {
@@ -64,7 +70,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &src)
 {
     std::cout << "MateriaSource = operator called" << std::endl;
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
         learned_materia[i] = src.learned_materia[i]->clone();
     }

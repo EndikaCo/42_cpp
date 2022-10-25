@@ -12,14 +12,10 @@
 
 #include "../inc/Cure.hpp"
 
-Cure::Cure() : AMateria()
+Cure::Cure()
 {
+    type = "cure";
     std::cout << "Cure default constructor called" << std::endl;
-}
-
-Cure::Cure(std::string type) : AMateria(type)
-{
-    std::cout << "Cure parameter constructor called" << std::endl;
 }
 
 Cure::~Cure()
@@ -30,11 +26,21 @@ Cure::~Cure()
 Cure* Cure::clone() const
 {
     std::cout << "Cure clone method called" << std::endl;
-    Cure *temp = new Cure(*this);
-    return (temp);
+    return (new Cure(*this));
 }
 
 void Cure::use(ICharacter& character)
 {
    std::cout << "* heals " << character.getName() << "'s wounds *" << std::endl;
+}
+
+Cure &Cure::operator=(Cure const &org){
+    std::cout << "Cure = operator Called" << std::endl;
+    type = org.type;
+    return *this;
+}
+
+Cure::Cure(Cure const &r){
+	std::cout << "Cure Copy Constructor Called" << std::endl;
+    *this = r;
 }

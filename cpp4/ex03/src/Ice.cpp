@@ -12,14 +12,10 @@
 
 #include "../inc/Ice.hpp"
 
-Ice::Ice() : AMateria()
+Ice::Ice()
 {
+    type = "ice";
     std::cout << "Ice default constructor called" << std::endl;
-}
-
-Ice::Ice(std::string type) : AMateria(type)
-{
-    std::cout << "Ice parameter constructor called" << std::endl;  
 }
 
 Ice::~Ice()
@@ -29,13 +25,22 @@ Ice::~Ice()
 
 void Ice::use(ICharacter& character)
 {
-    std::cout << "* shoots an ice bolt at " << character.getName() << " *";
+    std::cout << "* shoots an ice bolt at " << character.getName() << " *" << std::endl;
 }
 
 Ice* Ice::clone() const
 {
     std::cout << "Ice clone method called" << std::endl;
-    Ice *temp = new Ice(*this);
-    return (temp);
+    return (new Ice(*this));
+}
+
+Ice	&Ice::operator=(Ice const &r){
+    type = r.type;
+    return *this;
+}
+
+Ice::Ice(Ice const &r){
+	std::cout << "Ice Copy Constructor Called" << std::endl;
+    *this = r;
 }
 

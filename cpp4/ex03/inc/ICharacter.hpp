@@ -19,10 +19,6 @@ class AMateria; //class forward declaration
 //Interface for Character
 class ICharacter
 {
-    protected:
-        std::string name;
-        AMateria *materia[4];    
-        
     public:
         virtual ~ICharacter() {}
         virtual std::string const & getName() const = 0;

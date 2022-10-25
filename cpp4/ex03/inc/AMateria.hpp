@@ -24,8 +24,8 @@ class AMateria
         std::string type;
     public:
         AMateria();
-        AMateria(std::string const & type);
-        AMateria( AMateria const & orig);       //copy
+        AMateria(std::string const & type);    //parameter construcotr
+        AMateria(AMateria const & orig);       //copy constructor
         virtual ~AMateria();
         std::string const & getType() const;    //Returns the materia type
         virtual AMateria* clone() const = 0;

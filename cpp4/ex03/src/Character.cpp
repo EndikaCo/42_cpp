@@ -16,6 +16,7 @@
 //Character default constructor
 Character::Character()
 {
+    name = "Default";
     for (int i = 0; i < 4; i++)
         materia[i] = NULL;
     std::cout << "Character default constructor called" << std::endl;    
@@ -32,8 +33,7 @@ Character::Character(std::string name) : name(name)
 //Character destructor
 Character::~Character()
 {
-    //delete[] materia;
-    std::cout << "Character destructor called" << std::endl;    
+    std::cout << "Character destructor called" << std::endl;
 }
 
 //Copy constructor
@@ -46,9 +46,7 @@ Character::Character(Character const &org)
 //DEEP COPY
 Character &Character::operator=(const Character &nc){
 	if (this != &nc)
-    { 		
-        //delete []materia;
-        
+    {
         this->name = nc.name;
 
         for (int i = 0; i < 4; i++)
@@ -61,7 +59,7 @@ Character &Character::operator=(const Character &nc){
  
 const std::string& Character::getName() const
 {
-    std::cout << "Character getter called" << std::endl;     
+    //std::cout << "Character getter called" << std::endl;
     return (name);
 }
 

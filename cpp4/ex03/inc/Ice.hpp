@@ -20,10 +20,11 @@ class Ice : public AMateria
 {
     public:
         Ice();
-        Ice(std::string type);
-        ~Ice();
+        virtual ~Ice();
         void use(ICharacter& character);
         Ice* clone() const;
+        Ice(Ice const &r);//copy
+        Ice	&operator=(Ice const &r);// = operator
 };
 
 #endif

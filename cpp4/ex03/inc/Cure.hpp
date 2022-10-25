@@ -19,10 +19,12 @@ class Cure : public AMateria
 {
     public:
         Cure();
-        Cure(std::string type);
-        ~Cure();
+        virtual ~Cure();
         void use(ICharacter&);
         Cure* clone() const;
+        Cure &operator=(Cure const &org);    //= operator
+        Cure(Cure const &r);           //copy
+
 };  
 
 #endif

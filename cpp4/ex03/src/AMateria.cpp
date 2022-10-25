@@ -11,13 +11,11 @@
 /* ************************************************************************** */
 
 #include "../inc/AMateria.hpp"
-
-
 #include <iostream>
+
 //AMateria default constructor
 AMateria::AMateria()
 {
-    type = "blank";
     std::cout << "AMateria default constructor called" << std::endl;  
 }
 //AMateria Parameter constructor
@@ -28,7 +26,7 @@ AMateria::AMateria(std::string const &type) : type(type)
 
 AMateria::AMateria( AMateria const & org)
 {
-    std::cout << "AMaeria copy constructor called" << std::endl;
+    std::cout << "AMateria copy constructor called" << std::endl;
     *this = org;  
 }
 
@@ -48,12 +46,10 @@ void AMateria::use(ICharacter& target)
     target.getName();
     std::cout << "AMateria use called" << std::endl;      
 }
-        
 
 AMateria &AMateria::operator=(const AMateria& orig)
 {
-    std::cout << "AMateria assigment operator called" << std::endl; 
-    if (this != &orig)
+    std::cout << "AMateria assigment operator called" << std::endl;
         type = orig.getType();
     return (*this);
 }

@@ -28,6 +28,13 @@ WrongAnimal::WrongAnimal(WrongAnimal const &orig)
     *this = orig;
     return;    
 }
+
+WrongAnimal &WrongAnimal::operator=(WrongAnimal const &orig)
+{
+    this->type = orig.type;
+    std::cout << "WrongAnimal = operator overload called" << std::endl;
+    return (*this);
+}
     
 std::string WrongAnimal::getType(void) const
 {

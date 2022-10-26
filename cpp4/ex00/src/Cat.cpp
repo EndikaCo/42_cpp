@@ -27,3 +27,18 @@ void Cat::makeSound(void) const
 {
     std::cout << "Miaaauuh!!!" << std::endl;    
 }
+
+// Animal class copy contructor
+Cat::Cat(Cat const &orig)
+{
+    *this = orig;
+    return;
+}
+
+//assignation operator overload.
+Cat& Cat::operator=(Cat const& a)
+{
+    std::cout << "Animal Assignation operator called\n";
+    this->type = a.type;
+    return (*this);
+}

@@ -27,3 +27,18 @@ void WrongCat::makeSound(void) const
 {
     std::cout << "Miaaauuh!!!" << std::endl;    
 }
+
+// WrongCat class copy contructor
+WrongCat::WrongCat(WrongCat const &orig)
+{
+    *this = orig;
+    return;
+}
+
+//assignation operator overload.
+WrongCat& WrongCat::operator=(WrongCat const& a)
+{
+    std::cout << "WrongCat Assignation operator called\n";
+    this->type = a.type;
+    return (*this);
+}

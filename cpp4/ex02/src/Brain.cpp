@@ -34,3 +34,16 @@ void Brain::setIdea(std::string idea)
                 n++;
         ideas[n] = idea;
 }
+
+Brain::Brain(Brain const &orig)
+{
+    *this = orig;
+    return;
+}
+
+Brain& Brain::operator=(Brain const& orig)
+{
+    for(int i=0; i < 100; i++)
+        this->ideas[i] = orig.ideas[i];
+    return (*this);
+}

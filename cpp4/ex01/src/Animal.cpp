@@ -22,12 +22,6 @@ Animal::~Animal()
 {   
     std::cout << "Animal class destructor called" << std::endl;  
 }
-// Animal class copy contructor
-Animal::Animal(Animal const &orig)
-{
-    *this = orig;
-    return;    
-}
     
 std::string Animal::getType(void) const
 {
@@ -37,4 +31,19 @@ std::string Animal::getType(void) const
 void Animal::makeSound(void) const
 {
     std::cout << "No sound" << std::endl;
+}
+
+// Animal class copy contructor
+Animal::Animal(Animal const &orig)
+{
+    *this = orig;
+    return;
+}
+
+//assignation operator overload.
+Animal& Animal::operator=(Animal const& a)
+{
+    std::cout << "Animal Assignation operator called\n";
+    this->type = a.type;
+    return (*this);
 }

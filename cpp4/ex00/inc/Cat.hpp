@@ -21,6 +21,8 @@ class Cat : public Animal
         Cat();
         ~Cat();
         void makeSound(void) const;
+        Cat(Cat const &orig);
+        Cat& operator=(Cat const& a);
 };
 
 #endif

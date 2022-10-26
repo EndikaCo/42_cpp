@@ -28,3 +28,18 @@ void Dog::makeSound(void) const
 {
     std::cout << "Guauh!!!" << std::endl;    
 }
+
+// Animal class copy contructor
+Dog::Dog(Dog const &orig)
+{
+    *this = orig;
+    return;
+}
+
+//assignation operator overload.
+Dog& Dog::operator=(Dog const& a)
+{
+    std::cout << "Animal Assignation operator called\n";
+    this->type = a.type;
+    return (*this);
+}

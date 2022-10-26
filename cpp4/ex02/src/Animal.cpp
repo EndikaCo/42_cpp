@@ -38,3 +38,11 @@ void Animal::makeSound(void) const
 {
     std::cout << "No sound" << std::endl;
 }
+
+//assignation operator overload.
+Animal& Animal::operator=(Animal const& a)
+{
+    std::cout << "Animal Assignation operator called\n";
+    this->type = a.type;
+    return (*this);
+}

@@ -22,6 +22,8 @@ class Dog : public Animal
         Dog (/* args */);
         ~Dog ();
         void makeSound(void) const;
+        Dog(Dog const &orig);
+        Dog& operator=(Dog const& a);
 };
 
 #endif

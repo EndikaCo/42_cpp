@@ -24,6 +24,8 @@ public:
     ~Brain();
     std::string getIdeas(int n);
     void setIdea(std::string idea);
+    Brain(Brain const &orig);
+    Brain& operator=(Brain const& orig);
 }; 
 
 #endif

@@ -38,3 +38,12 @@ void WrongAnimal::makeSound(void) const
 {
     std::cout << "No sound" << std::endl;
 }
+
+//assignation operator overload.
+WrongAnimal& WrongAnimal::operator=(WrongAnimal const& a)
+{
+    std::cout << "WrongAnimal Assignation operator called\n";
+    this->type = a.type;
+    return (*this);
+}
+

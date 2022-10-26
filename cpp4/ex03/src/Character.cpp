@@ -77,9 +77,12 @@ void Character::equip(AMateria* m)
         {
             materia[i] =  m->clone();
             std::cout << materia[i]->getType() << " equiped in slot " << i  << std::endl;
+            delete m;
             return;
         }
+
     }
+
         std::cout << "sorry, max materia equiped"  << std::endl; 
 }
 

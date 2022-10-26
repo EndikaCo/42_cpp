@@ -20,8 +20,7 @@ FILES	=	src/main			\
 			src/Cure			\
 			src/Ice				\
 			src/MateriaSource	\
-	
-					
+
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))
 

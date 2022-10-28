@@ -26,36 +26,37 @@ Form::~Form(){
     std::cout << "Form Destructor called" << std::endl;
 }
 
-Form::Form(Form const & org){
-    *this = org;
-    return;
-}
+Form::Form(Form const & org):
+    name(org.name),
+    gradeToSign(org.gradeToSign),
+    gradeToExecute(org.gradeToExecute)
+    {
+
+    std::cout << "Form copy constructor called." << std::endl;
+    }
 
 Form& Form::operator=(Form const &org){
-
-    this->name = org.name;
-    this->gradeToSign = org.gradeToSign;
-    this->gradeToExecute = org.gradeToExecute;
+    std::cout << org.getName() << "Copy constructor called." << std::endl;
     return *this;
 }
 
-std::string Form::getName() {
+std::string Form::getName() const {
     return name;
 }
 
-int Form::getGradeToExecute() {
+int Form::getGradeToExecute() const {
     return gradeToExecute;
 }
 
-int Form::getGradeToSign() {
+int Form::getGradeToSign() const {
     return gradeToSign;
 }
 
-bool Form::getIsSigned() {
+bool Form::getIsSigned() const {
     return isSigned;
 }
 
-void Form::signForm(const int &bureaucrat) {
+void Form::signForm(const Bureaucrat &bureaucrat) {
     if (bureaucrat.getGrade() > 150)
     {
         throw Form::GradeTooLowException();

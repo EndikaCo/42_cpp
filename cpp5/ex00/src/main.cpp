@@ -30,4 +30,14 @@ int main() {
         std::cout << e.what() << std::endl;
     }
     delete b2;
+
+    std::cout << "TEST3"<< std::endl;
+    try
+    {
+        Bureaucrat( "manolo", 160);
+    }
+    catch(std::exception & e)
+    {
+        std::cout << e.what() << std::endl;
+    }
 }

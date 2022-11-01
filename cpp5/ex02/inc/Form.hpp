@@ -47,10 +47,10 @@ public:
     };
 
     class FormNotSignedException : public std::exception{
-    public:
-        virtual const char *what() const throw(){
-            return "The form is not signed";
-        }
+        public:
+            virtual const char *what() const throw(){
+                return "The form is not signed";
+            }
     };
 
 };

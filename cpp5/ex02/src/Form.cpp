@@ -1,8 +1,6 @@
 
 #include "../inc/Form.hpp"
 
-
-
 Form::Form():
         name("noname"),
         gradeToSign(150),

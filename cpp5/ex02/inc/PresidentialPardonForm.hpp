@@ -10,7 +10,7 @@
 class PresidentialPardonForm :public Form
 {
 private:
-    std::string target;
+    std::string  target;
 public:
     PresidentialPardonForm();
     PresidentialPardonForm(std::string target);
@@ -20,6 +20,7 @@ public:
     PresidentialPardonForm &operator=(PresidentialPardonForm const &form);//= operator
 
     void execute(Bureaucrat const &executor) const;
+    std::string getTarget() const;
 };
 
 #endif

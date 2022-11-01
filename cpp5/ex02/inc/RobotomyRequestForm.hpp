@@ -20,6 +20,7 @@ public:
     RobotomyRequestForm &operator=(RobotomyRequestForm const &form);//= operator
 
     void execute(Bureaucrat const &executor) const;
+    std::string getTarget()const;
 };
 
 

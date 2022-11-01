@@ -7,6 +7,7 @@ FILES	=	src/main			\
 			src/Bureaucrat		\
 			src/Form			\
 			src/RobotomyRequestForm\
+			src/PresidentialPardonForm\
 			src/ShrubberyCreationForm
 
 

@@ -3,10 +3,10 @@
 #include<iostream>
 
 ShrubberyCreationForm::ShrubberyCreationForm(): Form("notarget", 145, 137) {
-
-}
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target): Form(target, 145, 137){
     std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
+}
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target): Form(target, 145, 137), target(target){
+    std::cout << "ShrubberyCreationForm parameter constructor called" << std::endl;
 }
 ShrubberyCreationForm::~ShrubberyCreationForm() {
     std::cout << "ShrubberyCreationForm destructor called" << std::endl;
@@ -20,20 +20,25 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &form) 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &form)
 {
     target = form.target;
-    return (*this);
     std::cout << "ShrubberyCreationForm = operator called" << std::endl;
+    return (*this);
+}
+
+std::string ShrubberyCreationForm::getTarget() const{
+    return target;
 }
 
 void ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const {
 
     std::string fileName = target;
-
-    if (this->getGradeToExecute() > bureaucrat.getGrade()){
-        throw GradeTooLowException();
-    }
+    std::cout << "ShrubberyCreationForm execute called" << std::endl;
 
     if (getIsSigned() == false){
         throw FormNotSignedException();
+    }
+
+    if (this->getGradeToExecute() < bureaucrat.getGrade()){
+        throw GradeTooLowException();
     }
 
     std::ofstream(fileName.append("_shrubbery").c_str())

@@ -7,10 +7,10 @@
 # include <time.h>
 
 RobotomyRequestForm::RobotomyRequestForm(): Form("notarget", 72, 45) {
-
-}
-RobotomyRequestForm::RobotomyRequestForm(std::string target): Form(target, 72, 45){
     std::cout << "RobotomyRequestForm default constructor called" << std::endl;
+}
+RobotomyRequestForm::RobotomyRequestForm(std::string target): Form(target, 72, 45), target(target){
+    std::cout << "RobotomyRequestForm parameter constructor called" << std::endl;
 }
 RobotomyRequestForm::~RobotomyRequestForm() {
     std::cout << "RobotomyRequestForm destructor called" << std::endl;
@@ -24,15 +24,19 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &form) : Form
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &form)
 {
     target = form.target;
-    return (*this);
     std::cout << "RobotomyRequestForm = operator called" << std::endl;
+    return (*this);
+}
+
+std::string RobotomyRequestForm::getTarget() const{
+    return target;
 }
 
 void RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const {
 
-    std::string fileName = target;
+    std::cout << "RobotomyRequestForm execute called"<< std::endl;
 
-    if (this->getGradeToExecute() > bureaucrat.getGrade()){
+    if (this->getGradeToExecute() < bureaucrat.getGrade()){
         throw GradeTooLowException();
     }
 
@@ -47,5 +51,5 @@ void RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const {
     if (num == 1)
         std::cout << target << " has been robotomized successfully" << std::endl;
     else
-        std::cout << target << "robotomized failure" << std::endl;
+        std::cout << target << " robotomized failure" << std::endl;
 }

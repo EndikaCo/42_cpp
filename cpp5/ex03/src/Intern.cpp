@@ -39,7 +39,7 @@ int compareForm(std::string &name)
 
     std::string formName[] = {"presidential pardon", "robotomy request", "shrubbery creation"};
 
-    for (int i = 1; i < 4; ++i) {
+    for (int i = 1; i < 3; ++i) {
         if(name.compare(formName[i]) == 0)
         {
             return (i + 1);

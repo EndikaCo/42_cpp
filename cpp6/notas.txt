@@ -1,0 +1,14 @@
+STATIC CAST
+symples type of cast
+(compile time cast)
+
+*** static_cast<type>(expression)  <<
+type        = tipo de dato al que quieres cambiar
+expresion   = lo que quieres castear
+
+*lo que en c se hacia asi -> (int)centimetros*
+ahora se elige entre:
+static_cast<>();
+dynamic_cast<>();
+const_cast<>();
+reinterpret_cast<>();

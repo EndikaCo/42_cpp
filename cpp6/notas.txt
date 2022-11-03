@@ -1,3 +1,13 @@
+CASTEOS
+
+*lo que en c se hacia asi -> (int)centimetros*
+ahora se elige entre:
+static_cast<>();
+dynamic_cast<>();
+const_cast<>();
+reinterpret_cast<>();
+
+
 STATIC CAST
 symples type of cast
 (compile time cast)
@@ -6,9 +16,26 @@ symples type of cast
 type        = tipo de dato al que quieres cambiar
 expresion   = lo que quieres castear
 
-*lo que en c se hacia asi -> (int)centimetros*
-ahora se elige entre:
-static_cast<>();
-dynamic_cast<>();
-const_cast<>();
-reinterpret_cast<>();
+PROBLEMAS:
+-Como no realiza chequeos de herencia, podemos acabar teniendo punteros no válidos.
+-No funciona con herencias virtuales:
+
+
+DINAMIC CAST
+sirve precisamente para solucionar los problemas que hemos comentado de static_cast
+Este tipo de conversión se utiliza básicamente cuando tenemos polimorfismo de por medio. No tiene sentido utilizarla en otros ámbitos.
+
+
+
+CONST CAST
+Es una conversión que permite eliminar el modificador const de una referencia o un puntero.
+Esta conversión puede sernos de utilidad si necesitamos llamar a métodos no-const de un objeto que nos viene como const.
+El peligro que se esconde tras este tipo de conversiones es que no está permitido modificar objetos que se han creado como constantes,
+luego retirar su modificador const puede provocar resultados indeterminados en nuestra aplicación.
+
+const std::string texto_const = "TEST";
+
+texto_const.at(0) = 't'; // Error de compilación
+
+std::string* ptr_no_const = const_cast<std::string*>(&texto_const);
+ptr_no_const->at(0) = 't'; // resultado indeterminado

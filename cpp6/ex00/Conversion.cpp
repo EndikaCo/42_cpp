@@ -2,10 +2,10 @@
 #include "Conversion.hpp"
 #include <cstring>
 Conversion::Conversion() : number (0.0){
-    std::cout << "Conversion default constructor called";
+    //std::cout << "Conversion default constructor called";
 }
 Conversion::~Conversion() {
-    std::cout << "Conversion destructor called";
+    //std::cout << "Conversion destructor called";
 }
 Conversion::Conversion(const Conversion &conversion) {
     this->number = conversion.number;

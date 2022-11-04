@@ -10,6 +10,8 @@ Data *deserialize(uintptr_t raw){
 return(reinterpret_cast<Data *>(raw));
 }
 
+//convert integer types to pointer types and vice versa
+//convert one pointer type to another. The general idea I get is this is unportable and should be avoided.
 uintptr_t serialize(Data *ptr){
     return(reinterpret_cast<uintptr_t>(ptr));
 }

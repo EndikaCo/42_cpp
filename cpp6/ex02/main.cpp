@@ -25,38 +25,38 @@ Base* generate(void) {
 }
 
 //Write a function that displays "A", "B" or "C" according to the real type of p.
-void identify(Base* base)
+void identify(Base* p)
 {
-    A* a = dynamic_cast<A*>(base);
+    A* a = dynamic_cast<A*>(p); // It is only used to typecast any pointer to its original type.
     if (a != NULL)
         std::cout << "A" << std::endl;
-    B* b = dynamic_cast<B*>(base);
+    B* b = dynamic_cast<B*>(p);
     if (b != NULL)
         std::cout << "B" << std::endl;
-    C* c = dynamic_cast<C*>(base);
+    C* c = dynamic_cast<C*>(p);
     if (c != NULL)
         std::cout << "C" << std::endl;
 }
 
 //Write a function "void identify(Base& p);" You should never use a pointer inside
 //this function. that displays "A", "B" or "C" according to the real type of p.
-void identify(Base& base){
+void identify(Base& p){
     try {
-        A &a = dynamic_cast<A &>(base);
+        A &a = dynamic_cast<A &>(p);
         std::cout << "A" << std::endl;
         (void)a;
     }
     catch(std::exception &bc){
     }
     try {
-        B &b = dynamic_cast<B &>(base);
+        B &b = dynamic_cast<B &>(p);
         std::cout << "B" << std::endl;
         (void)b;
     }
     catch(std::exception &bc){
     }
     try {
-        C &c = dynamic_cast<C &>(base);
+        C &c = dynamic_cast<C &>(p);
         std::cout << "C" << std::endl;
         (void)c;
     }
@@ -66,10 +66,10 @@ void identify(Base& base){
 
 int main()
 {
-    Base *unknownType = generate();
-    identify(unknownType);
-    identify(*unknownType);
-    delete unknownType;
+    Base *base = generate();
+    identify(base);
+    identify(*base);
+    delete base;
     return (0);
 }
 

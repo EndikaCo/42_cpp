@@ -1,3 +1,5 @@
+make re
+
 echo 'TEST1:   ./ex00 0'
 ./ex00 0
 echo
@@ -15,3 +17,5 @@ echo 'TEST5:   ./ex00 -42'
 echo
 echo 'TEST6:   ./ex00 +inff'
 ./ex00 +inff
+
+make fclean

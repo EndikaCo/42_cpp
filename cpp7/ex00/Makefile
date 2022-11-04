@@ -1,9 +1,9 @@
 
-NAME	=	ex00_scalar_conversion
+NAME	=	ex00
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -g3 -std=c++98 -pedantic -fsanitize=address
 RM		=	rm -rf
-FILES	=	src/main
+FILES	=	main
 
 SRCS	=	$(addsuffix .cpp, $(FILES))
 OBJS	=	$(addsuffix .o, $(FILES))

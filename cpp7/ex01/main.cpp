@@ -1,53 +1,36 @@
 #include <iostream>
-#include <Array.hpp>
+#include "Iter.hpp"
 
-#define MAX_VAL 750
-int main(int, char**)
+#include <cstring>
+
+template <typename T>
+void f(T &a)
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
+    a += 10;
+}
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
-    }
-    try
-    {
-        numbers[-2] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+int main()
+{
+    int *n = new int[3];
+    n[0] = 0;
+    n[1] = 1;
+    n[2] = 2;
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
+    std::cout << "Before pointer function:" << std::endl;
+    for (int i = 0; i < 3; i++){
+        std::cout << n[i] << std::endl;
     }
-    delete [] mirror;//
+    std::cout << "After pointer function:" << std::endl;
+    Iter(n, 3, f);
+    delete []n;
+
+    char ch[] = { 'a','b','c','d'};
+    std::cout << "Before pointer function:" << std::endl;
+    for (int i = 0; i < 3; i++){
+        std::cout << ch[i] << std::endl;
+    }
+    std::cout << "After pointer function:" << std::endl;
+    Iter(ch, 3, f);
+
     return 0;
 }

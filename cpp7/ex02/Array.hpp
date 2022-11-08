@@ -7,7 +7,6 @@
 #include <time.h>
 
 template<class T>
-
 //Write a class template Array that contains elements of type T a
 class Array{
 
@@ -43,7 +42,6 @@ public:
     unsigned int size(){
         return sizeA;
     }
-
 
     //Cuando accedas a un elemento utilizando operator[], en caso de que esté fuera de
     //límites una excepción std::exception debe lanzarse.

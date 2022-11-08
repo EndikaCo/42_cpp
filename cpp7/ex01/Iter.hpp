@@ -7,13 +7,22 @@
 // The first parameter is the address of an array,
 // the second one is the length of the array and the
 //third one is a function called for each element of the array.
+
 template <typename T>
 void Iter(T *addr, int len, void(*fun)(T &)){
-
     for (int i = 0; i < len; i++){
         fun(addr[i]);
         std::cout << addr[i] << std::endl;
     }
 }
 
+/*
+//CORRECTION TESTING
+template <typename T>
+void Iter(T *addr, int len, void(*fun)(T const &)){
+    for (int i = 0; i < len; i++)
+        fun(addr[i]);
+}*/
+
 #endif
+

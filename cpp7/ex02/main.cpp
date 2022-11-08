@@ -1,10 +1,10 @@
 #include <iostream>
 #include "Array.hpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 4
 int main(int, char**)
 {
-    Array<int> numbers(MAX_VAL);
+    Array<int> numbers((unsigned int)MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
@@ -18,7 +18,6 @@ int main(int, char**)
         Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
-
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
@@ -43,11 +42,14 @@ int main(int, char**)
     {
         std::cerr << e.what() << '\n';
     }
-
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
+    try{
+        Array<int> n(0);
+        std::cout << "array of empty size" << std::endl; //Is it possible to create an empty array and an array of a specific size?
     }
-    delete [] mirror;//
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    delete [] mirror;
     return 0;
 }

@@ -12,7 +12,7 @@ void easyfind(T &vect, int num)
     std::vector<int>::iterator it;
 
     //find the first occurrence of the second parameter in the first parameter.
-    it = find (vect.begin(), vect.end(), num);
+    it = find(vect.begin(), vect.end(), num);
 
     if (it != vect.end())
         std::cout << *it  << " found in vector" << '\n';

@@ -35,6 +35,6 @@ public:
     };
 };
 
-std::ostream &operator<<(std::ostream &out, Span const &org);
+//std::ostream &operator<<(std::ostream &out, Span const &org);
 
 #endif //CPP8_SPAN_HPP

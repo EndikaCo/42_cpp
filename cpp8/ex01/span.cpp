@@ -60,10 +60,10 @@ int Span::shortestSpan() {
     return (span);
 }
 
-std::ostream &operator<<(std::ostream &out, Span const &org) {
+/*std::ostream &operator<<(std::ostream &out, Span const &org) {
 
     out << "Span: ";
     for (int it : org.getVector())
         out  << it << " ";
     return out;
-}
+}*/

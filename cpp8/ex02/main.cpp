@@ -1,5 +1,21 @@
 #include <iostream>
 #include "MutantStack.hpp"
+#include "MutantStack.cpp"
+
+void extraTest(){
+    std::cout << std::endl << "LIFO TEST EXTRA" << std::endl;
+    MutantStack<int> m;
+    m.push(1);
+    std::cout << "top: " << m.top() << std::endl;
+    m.push(20);
+    std::cout << "size: " << m.size() << std::endl;
+    m.pop();
+    std::cout << "size after pop: " << m.size() << std::endl;
+    MutantStack<int>::iterator it = m.end();
+    std::cout << "end: " << *it << std::endl;
+    if(m.empty() != 1)
+        std::cout << "size after empty: " << m.size() << std::endl;
+}
 
 int main()
 {
@@ -24,5 +40,8 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+
+    extraTest();
     return 0;
 }
+

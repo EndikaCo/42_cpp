@@ -18,14 +18,9 @@ public:
     MutantStack(const MutantStack &);
     MutantStack &operator=(const MutantStack &);
 
-   // typedef typename std::stack<T>::container_type::iterator iterator;
-   // iterator begin() { return this->c.begin(); }
-   // iterator end() { return this->c.end(); }
-
-    typename MutantStack<T>::container_type::iterator  begin(void) ;
-
-    typename MutantStack<T>::container_type::iterator  end(void) ;
-
+    typedef typename std::stack<T>::container_type::iterator iterator;
+    iterator begin() { return this->c.begin(); }
+    iterator end() { return this->c.end(); }
 };
 
 

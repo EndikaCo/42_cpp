@@ -45,18 +45,21 @@ int Span::longestSpan() {
 
 int Span::shortestSpan() {
 
-    int	span;
+    std::vector<int>::iterator  it;
+    int	                        span;
 
     if (vec.size() <= 1)
         throw std::logic_error("Vector size too small");
 
-    std::vector<int>::iterator it;
-
     std::sort(vec.begin(), vec.end());
-    for (it = vec.begin() + 1, span = *it - *(it - 1); it < vec.end() - 1; ++it)
-        if (*(it + 1) - *it < span)
-            span = *(it + 1) - *it;
 
+    for (it = vec.begin() + 1, span = *it - *(it - 1); it < vec.end() - 1; ++it)
+    {
+        if (*(it + 1) - *it < span)
+        {
+            span = *(it + 1) - *it;
+        }
+    }
     return (span);
 }
 

@@ -19,7 +19,7 @@ int main()
     easyfind(vector2, 8);
 
     //TEST3
-    std::vector<int> vector3{ 1, 2, 5 };
-    easyfind(vector3, 5);
-    return 0;
+    //std::vector<int> vector3 = { 1, 2, 5 }; //es c11
+    //easyfind(vector3, 5);
+    //return 0;
 }

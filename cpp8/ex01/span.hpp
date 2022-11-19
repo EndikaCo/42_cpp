@@ -1,6 +1,6 @@
 
-#ifndef CPP8_SPAN_HPP
-#define CPP8_SPAN_HPP
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
 #include <vector>
 #include <iostream>
@@ -30,11 +30,9 @@ public:
     int shortestSpan();
     int longestSpan();
 
-    std::vector<int> getVector() const {
-        return vec;
-    };
 };
 
 //std::ostream &operator<<(std::ostream &out, Span const &org);
 
-#endif //CPP8_SPAN_HPP
+#endif
+
